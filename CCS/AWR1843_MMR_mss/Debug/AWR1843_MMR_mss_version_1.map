@@ -1,0 +1,1143 @@
+******************************************************************************
+                  TI ARM Linker PC v16.9.6                     
+******************************************************************************
+>> Linked Mon May 12 23:36:41 2025
+
+OUTPUT FILE NAME:   <AWR1843_MMR_mss_version_1.xer4f>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00007830
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  PROG_VEC_TCMA_RAM     00000000   00000048  00000034  00000014  RWIX
+  MSS_TCMA_RAM          00000048   0003ffb0  00009f04  000360ac  RWIX
+  MSS_TCMA_RAM_END      0003fff8   00000008  00000000  00000008  RWIX
+  MSS_TCMB              08000000   00030000  00003891  0002c76f  RWIX
+  MSS_SW_BUFFER         0c200000   00002000  00000000  00002000  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00000034   00000034    r-x
+  00000000    00000000    00000034   00000034    r-x .intvecs
+00000048    00000048    000003c4   000003c4    r-x
+  00000048    00000048    000003c4   000003c4    r-x .startup
+00000410    00000410    00000800   00000000    rw-
+  00000410    00000410    00000800   00000000    rw- .sysmem
+00000c10    00000c10    00009340   00009340    r-x
+  00000c10    00000c10    000086e0   000086e0    r-x .code
+  000092f0    000092f0    00000a60   00000a60    r-- .cinit
+  00009d50    00009d50    00000200   00000200    r-- .const
+08000000    08000000    00003891   00000000    rw-
+  08000000    08000000    00002050   00000000    rw- .stack
+  08002050    08002050    00000e10   00000000    rw- .bss
+  08002e60    08002e60    00000a31   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000034     
+                  00000000    00000034     sys_intvecs.obj (.intvecs)
+
+.startup   0    00000048    000003c4     
+                  00000048    000003c4     sys_vim.obj (.startup:vimIrqDispatcher)
+
+.sysmem    0    00000410    00000800     UNINITIALIZED
+                  00000410    00000008     rtsv7R4_T_le_v3D16_eabi.lib : memory.obj (.sysmem)
+                  00000418    000007f8     --HOLE--
+
+.code      0    00000c10    000086e0     
+                  00000c10    0000107a     rtsv7R4_T_le_v3D16_eabi.lib : _printfi.obj (.text)
+                  00001c8a    00000002     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_init)
+                  00001c8c    00000590     cli.obj (.text:MmwDemo_CLIInit)
+                  0000221c    000003d8     rtsv7R4_T_le_v3D16_eabi.lib : memory.obj (.text)
+                  000025f4    000003ac     mss_main.obj (.text:MmwDemo_mboxReadTask)
+                  000029a0    00000384     mss_main.obj (.text:mssInitTask)
+                  00002d24    00000324     cli.obj (.text:set_MMWaveProfileCfg)
+                  00003048    00000308     libsoc_xwr18xx.aer4f : soc_xwr18xx_mss.oer4f (.text:SOC_deviceInit)
+                  00003350    000002b8     rtsv7R4_T_le_v3D16_eabi.lib : ull_div32.obj (.text)
+                  00003608    00000260     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_open)
+                  00003868    0000022c     cli.obj (.text:CLI_task_mod)
+                  00003a94    00000214     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_open)
+                  00003ca8    00000214     sys_vim.obj (.text:vimEnableInterrupt)
+                  00003ebc    000001f0     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_setChannelParams)
+                  000040ac    000001e4     rtsv7R4_T_le_v3D16_eabi.lib : strtod.obj (.text)
+                  00004290    000001c8                                 : fopen.obj (.text)
+                  00004458    00000184     sys_vim.obj (.text:vimInit)
+                  000045dc    00000178     cli.obj (.text:set_MMWaveFrameCfg)
+                  00004754    00000170     libgpio_xwr18xx.aer4f : gpio.oer4f (.text:GPIO_setConfig)
+                  000048c4    0000016c     libsoc_xwr18xx.aer4f : soc_xwr18xx_mss.oer4f (.text:SOC_unhaltDSS)
+                  00004a30    0000014a     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_ISR)
+                  00004b7a    00000002     sys_vim.obj (.text:phantomInterrupt)
+                  00004b7c    00000146     mss_main.obj (.text:mssCtrlPathTask)
+                  00004cc2    00000002     rtsv7R4_T_le_v3D16_eabi.lib : mpu_init.obj (.text)
+                  00004cc4    00000138     mss_main.obj (.text:main)
+                  00004dfc    00000138     rtsv7R4_T_le_v3D16_eabi.lib : fputs.obj (.text)
+                  00004f34    00000108     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_disableInterrupt)
+                  0000503c    00000108     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_write)
+                  00005144    00000100     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_clearChannelInterruptFlag)
+                  00005244    00000100     sys_startup.obj (.text)
+                  00005344    000000fc     sys_vim.obj (.text:vimParityErrorHandler)
+                  00005440    000000f4     mss_main.obj (.text:notifySensorStart)
+                  00005534    000000f4     cli.obj (.text:set_MMWaveChirpCfg)
+                  00005628    000000f0     cli.obj (.text:CLI_open_mod)
+                  00005718    000000ec     rtsv7R4_T_le_v3D16_eabi.lib : s_scalbn.obj (.text)
+                  00005804    000000e0     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_enableInterrupt)
+                  000058e4    000000dc     rtsv7R4_T_le_v3D16_eabi.lib : setvbuf.obj (.text)
+                  000059c0    000000d8     cli.obj (.text:CLI_help_mod)
+                  00005a98    000000d8     sys_vim.obj (.text:vimWakeupConfigSet)
+                  00005b70    000000d4     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_read)
+                  00005c44    000000d0     cli.obj (.text:set_CLIGuiMonSel)
+                  00005d14    000000d0     cli.obj (.text:set_CLIvitalSignsParamsCfg)
+                  00005de4    000000cc     rtsv7R4_T_le_v3D16_eabi.lib : fflush.obj (.text)
+                  00005eb0    000000bc     libgpio_xwr18xx.aer4f : gpio.oer4f (.text:GPIO_write)
+                  00005f6c    000000bc     rtsv7R4_T_le_v3D16_eabi.lib : open.obj (.text)
+                  00006028    000000ba     sys_vim.obj (.text:regWriteReadback)
+                  000060e2    00000002     rtsv7R4_T_le_v3D16_eabi.lib : startup.obj (.text)
+                  000060e4    000000b8     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_getChannelInterruptFlag)
+                  0000619c    000000b6     libsoc_xwr18xx.aer4f : soc_mpu.o (.text)
+                  00006252    000000b2     libuart_xwr18xx.aer4f : uartsci_dma.oer4f (.text:UartSci_openDMA)
+                  00006304    000000b0     mss_main.obj (.text:nonOsLoop)
+                  000063b4    000000b0     cli.obj (.text:send_configuration)
+                  00006464    000000ae     rtsv7R4_T_le_v3D16_eabi.lib : _io_perm.obj (.text)
+                  00006512    00000002     --HOLE-- [fill = 0]
+                  00006514    000000ac     libesm_xwr18xx.aer4f : esm.oer4f (.text:ESM_processInterrupt)
+                  000065c0    000000ac     mss_main.obj (.text:stopProcedure)
+                  0000666c    000000ac     sys_vim.obj (.text:vimDisableInterrupt)
+                  00006718    000000a8     HwiP_nonos.obj (.text:HwiP_create)
+                  000067c0    000000a8     libpinmux_xwr18xx.aer4f : pinmux.oer4f (.text:Pinmux_Set_OverrideCtrl)
+                  00006868    000000a4     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_assignChannel)
+                  0000690c    000000a4     libesm_xwr18xx.aer4f : esm.oer4f (.text:ESM_init)
+                  000069b0    000000a4     sys_vim.obj (.text:vimChannelMap)
+                  00006a54    0000009c     HwiP_nonos.obj (.text:HwiP_delete)
+                  00006af0    0000009c     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_write)
+                  00006b8c    0000009c     rtsv7R4_T_le_v3D16_eabi.lib : memcpy_t2.obj (.text)
+                  00006c28    00000098                                 : fclose.obj (.text)
+                  00006cc0    00000098                                 : fputc.obj (.text)
+                  00006d58    00000096     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_readChar)
+                  00006dee    00000002     --HOLE-- [fill = 0]
+                  00006df0    00000090     libgpio_xwr18xx.aer4f : gpio.oer4f (.text:GPIO_init)
+                  00006e80    00000090     libuart_xwr18xx.aer4f : uartsci_dma.oer4f (.text:UartSci_initiateTxDMA)
+                  00006f10    00000090                           : uartsci.oer4f (.text:UartSci_read)
+                  00006fa0    00000090     sys_vim.obj (.text:enableDisableIrqFiq)
+                  00007030    00000090     mss_main.obj (.text:startProcedure)
+                  000070c0    0000008c     libsoc_xwr18xx.aer4f : soc.oer4f (.text:SOC_init)
+                  0000714c    0000008c                          : soc_xwr18xx.oer4f (.text:SOC_translateAddress)
+                  000071d8    0000008c     libuart_xwr18xx.aer4f : uartsci_dma.oer4f (.text:UartSci_initiateRxDMA)
+                  00007264    00000088     rtsv7R4_T_le_v3D16_eabi.lib : vsnprintf.obj (.text)
+                  000072ec    00000088     cli.obj (.text:set_ADCBufCfg)
+                  00007374    00000084     MemoryP_nonos.obj (.text:MemoryP_ctrlAlloc)
+                  000073f8    00000080     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_writePolling)
+                  00007478    0000007c     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_init)
+                  000074f4    0000007c     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_readPolling)
+                  00007570    0000007a     rtsv7R4_T_le_v3D16_eabi.lib : memset_t2.obj (.text)
+                  000075ea    00000002     --HOLE-- [fill = 0]
+                  000075ec    00000078     cli.obj (.text:MmwDemo_mssCfgUpdate)
+                  00007664    00000074     rtsv7R4_T_le_v3D16_eabi.lib : getdevice.obj (.text)
+                  000076d8    00000074                                 : s_frexp.obj (.text)
+                  0000774c    00000074     cli.obj (.text:set_MMWaveDataOutputMode)
+                  000077c0    00000070     rtsv7R4_T_le_v3D16_eabi.lib : autoinit.obj (.text)
+                  00007830    00000070                                 : boot.obj (.text)
+                  000078a0    00000070                                 : printf.obj (.text)
+                  00007910    0000006c     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_disableChannel)
+                  0000797c    0000006c                          : dma.oer4f (.text:DMA_enableChannel)
+                  000079e8    0000006c     libpinmux_xwr18xx.aer4f : pinmux.oer4f (.text:Pinmux_Set_FuncSel)
+                  00007a54    0000006c     rtsv7R4_T_le_v3D16_eabi.lib : copy_decompress_lzss.obj (.text:decompress:lzss)
+                  00007ac0    0000006c                                 : trgmsg.obj (.text)
+                  00007b2c    0000006a     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_control)
+                  00007b96    00000002     --HOLE-- [fill = 0]
+                  00007b98    00000068     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_readFlush)
+                  00007c00    00000068     mss_main.obj (.text:MmwDemo_Dss2MssISR)
+                  00007c68    00000068     rtsv7R4_T_le_v3D16_eabi.lib : hostlseek.obj (.text)
+                  00007cd0    00000068                                 : hostrename.obj (.text)
+                  00007d38    00000064                                 : fseek.obj (.text)
+                  00007d9c    00000064                                 : sprintf.obj (.text)
+                  00007e00    00000060     SemaphoreP_nonos.obj (.text:SemaphoreP_create)
+                  00007e60    0000005e     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_writeChar)
+                  00007ebe    00000002     --HOLE-- [fill = 0]
+                  00007ec0    0000005c     rtsv7R4_T_le_v3D16_eabi.lib : hostopen.obj (.text)
+                  00007f1c    0000005c                                 : hostread.obj (.text)
+                  00007f78    0000005a     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_readCancel)
+                  00007fd2    00000002     --HOLE-- [fill = 0]
+                  00007fd4    00000058     libesm_xwr18xx.aer4f : esm.oer4f (.text:ESM_highpriority_FIQ)
+                  0000802c    00000058     mss_main.obj (.text:MmwDemo_waitSensorStopComplete)
+                  00008084    00000058     libuart_xwr18xx.aer4f : uartsci_dma.oer4f (.text:UartSci_closeDMA)
+                  000080dc    00000058     rtsv7R4_T_le_v3D16_eabi.lib : close.obj (.text)
+                  00008134    00000058                                 : hostwrite.obj (.text)
+                  0000818c    00000054     libDMA_xwr18xx.aer4f : dma.oer4f (.text:DMA_freeChannel)
+                  000081e0    00000054     rtsv7R4_T_le_v3D16_eabi.lib : ltoa.obj (.text)
+                  00008234    00000050                                 : atoi.obj (.text)
+                  00008284    00000050                                 : exit.obj (.text)
+                  000082d4    00000050     mss_main.obj (.text:sensorStop)
+                  00008324    0000004e     Event_nonos.obj (.text:Event_pend)
+                  00008372    00000002     --HOLE-- [fill = 0]
+                  00008374    0000004c     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_boxEmptyISRProcessing)
+                  000083c0    0000004c     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_writeCancel)
+                  0000840c    0000004c     rtsv7R4_T_le_v3D16_eabi.lib : cpy_tbl.obj (.text)
+                  00008458    0000004a     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_boxFullISRProcessing)
+                  000084a2    00000046                              : mailbox.oer4f (.text:CSL_FINSR)
+                  000084e8    00000044                              : mailbox.oer4f (.text:Mailbox_boxFullISRMssDss)
+                  0000852c    00000044     libsoc_xwr18xx.aer4f : soc_xwr18xx_mss.oer4f (.text:SOC_resetDMA)
+                  00008570    00000044     rtsv7R4_T_le_v3D16_eabi.lib : hostclose.obj (.text)
+                  000085b4    00000044                                 : hostunlink.obj (.text)
+                  000085f8    00000044     cli.obj (.text:set_MMWaveADCCfg)
+                  0000863c    00000040     cli.obj (.text:configureDSS)
+                  0000867c    00000040     rtsv7R4_T_le_v3D16_eabi.lib : strtok.obj (.text)
+                  000086bc    0000003e     libDMA_xwr18xx.aer4f : dma.oer4f (.text:CSL_FINSR)
+                  000086fa    0000003e     libgpio_xwr18xx.aer4f : gpio.oer4f (.text:CSL_FINSR)
+                  00008738    0000003e     libpinmux_xwr18xx.aer4f : pinmux.oer4f (.text:CSL_FINSR)
+                  00008776    0000003e     libsoc_xwr18xx.aer4f : soc.oer4f (.text:CSL_FINSR)
+                  000087b4    0000003e                          : soc_xwr18xx.oer4f (.text:CSL_FINSR)
+                  000087f2    0000003e                          : soc_xwr18xx_mss.oer4f (.text:CSL_FINSR)
+                  00008830    0000003e     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:CSL_FINSR)
+                  0000886e    0000003e     Event_nonos.obj (.text:Event_checkEvents)
+                  000088ac    0000003e     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_close)
+                  000088ea    00000002     --HOLE-- [fill = 0]
+                  000088ec    0000003e     DebugP_nonos.obj (.text:_DebugP_assert)
+                  0000892a    00000002     --HOLE-- [fill = 0]
+                  0000892c    0000003c     HwiP_nonos.obj (.text:HwiP_dispatch)
+                  00008968    0000003c     libsoc_xwr18xx.aer4f : soc.oer4f (.text:SOC_unhaltBSS)
+                  000089a4    00000038     libuart_xwr18xx.aer4f : UART.oer4f (.text:UART_init)
+                  000089dc    00000038     mss_main.obj (.text:notifySensorStop)
+                  00008a14    00000036     rtsv7R4_T_le_v3D16_eabi.lib : strncpy.obj (.text)
+                  00008a4a    00000002     --HOLE-- [fill = 0]
+                  00008a4c    00000035     mss_main.obj (.text:_MmwDemo_mssAssert)
+                  00008a81    00000003     --HOLE-- [fill = 0]
+                  00008a84    00000034     mss_main.obj (.text:MmwDemo_installDss2MssExceptionSignallingISR)
+                  00008ab8    00000034     libsoc_xwr18xx.aer4f : soc_xwr18xx.oer4f (.text:SOC_setMMWaveMSSLinkState)
+                  00008aec    00000034     SemaphoreP_nonos.obj (.text:SemaphoreP_pend)
+                  00008b20    00000034     libuart_xwr18xx.aer4f : UART.oer4f (.text:UART_open)
+                  00008b54    00000030     cli.obj (.text:set_MMWaveChannelCfg)
+                  00008b84    0000002c     libgpio_xwr18xx.aer4f : gpio.oer4f (.text:GPIO_HighPriorityISR)
+                  00008bb0    0000002c                           : gpio.oer4f (.text:GPIO_LowPriorityISR)
+                  00008bdc    0000002c     mss_main.obj (.text:MmwDemo_mboxWrite)
+                  00008c08    0000002c     rtsv7R4_T_le_v3D16_eabi.lib : unlink.obj (.text)
+                  00008c34    0000002a     cli.obj (.text:CLI_write)
+                  00008c5e    0000002a     libsoc_xwr18xx.aer4f : soc.oer4f (.text:SOC_SystemISR)
+                  00008c88    0000002a     SemaphoreP_nonos.obj (.text:SemaphoreP_post)
+                  00008cb2    0000002a     rtsv7R4_T_le_v3D16_eabi.lib : strspn.obj (.text)
+                  00008cdc    00000028     HwiP_nonos.obj (.text:HwiP_Params_init)
+                  00008d04    00000028     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_Config_init)
+                  00008d2c    00000028     libuart_xwr18xx.aer4f : uartsci_dma.oer4f (.text:UartSci_RxDMACallbackFxn)
+                  00008d54    00000028                           : uartsci_dma.oer4f (.text:UartSci_TxDMACallbackFxn)
+                  00008d7c    00000028     rtsv7R4_T_le_v3D16_eabi.lib : lseek.obj (.text)
+                  00008da4    00000028                                 : write.obj (.text)
+                  00008dcc    00000024     libgpio_xwr18xx.aer4f : gpio.oer4f (.text:GPIO_processInterrupt)
+                  00008df0    00000024     cli.obj (.text:MMWaveFlushCfg)
+                  00008e14    00000024     libsoc_xwr18xx.aer4f : soc_xwr18xx.oer4f (.text:SOC_isMMWaveDSSOperational)
+                  00008e38    00000024     cli.obj (.text:set_MMWaveLowPowerCfg)
+                  00008e5c    00000024     sleep.obj (.text:sleep_ms)
+                  00008e80    00000022     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_disableRxDMA)
+                  00008ea2    00000022                           : uartsci.oer4f (.text:UartSci_enableRxDMA)
+                  00008ec4    00000022     rtsv7R4_T_le_v3D16_eabi.lib : strcspn.obj (.text)
+                  00008ee6    00000022     sys_vim.obj (.text:vimInterruptsInit)
+                  00008f08    00000020     libesm_xwr18xx.aer4f : esm.oer4f (.text:ESM_lowpriority_IRQ)
+                  00008f28    00000020     libpinmux_xwr18xx.aer4f : pinmux.oer4f (.text:Pinmux_Unlock)
+                  00008f48    00000020     rtsv7R4_T_le_v3D16_eabi.lib : memchr.obj (.text)
+                  00008f68    00000020     mss_main.obj (.text:sensorStart)
+                  00008f88    0000001e     libsoc_xwr18xx.aer4f : soc_xwr18xx_mss.oer4f (.text:SOC_getOutAddr_LUTType)
+                  00008fa6    00000002     --HOLE-- [fill = 0]
+                  00008fa8    0000001c     cli.obj (.text:CLI_getMMWaveExtensionOpenConfig)
+                  00008fc4    0000001c     libDMA_xwr18xx.aer4f : dma.oer4f (.text:CSL_FEXTR)
+                  00008fe0    0000001c     libsoc_xwr18xx.aer4f : soc.oer4f (.text:CSL_FEXTR)
+                  00008ffc    0000001c                          : soc_xwr18xx.oer4f (.text:CSL_FEXTR)
+                  00009018    0000001c                          : soc_xwr18xx_mss.oer4f (.text:CSL_FEXTR)
+                  00009034    0000001c     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:CSL_FEXTR)
+                  00009050    0000001c     HwiP_nonos.obj (.text:HwiP_disableInterrupt)
+                  0000906c    0000001c     libsoc_xwr18xx.aer4f : soc_xwr18xx_mss.oer4f (.text:SOC_getInAddr_LUTType)
+                  00009088    0000001c     SemaphoreP_nonos.obj (.text:SemaphoreP_Params_init)
+                  000090a4    0000001c     rtsv7R4_T_le_v3D16_eabi.lib : memccpy.obj (.text)
+                  000090c0    0000001a     Event_nonos.obj (.text:Event_post)
+                  000090da    0000001a     rtsv7R4_T_le_v3D16_eabi.lib : s_copysign.obj (.text)
+                  000090f4    00000018     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.text:Mailbox_boxEmptyISRBss)
+                  0000910c    00000018                              : mailbox.oer4f (.text:Mailbox_boxEmptyISRMssDss)
+                  00009124    00000018                              : mailbox.oer4f (.text:Mailbox_boxFullISRBss)
+                  0000913c    00000018     rtsv7R4_T_le_v3D16_eabi.lib : args_main.obj (.text)
+                  00009154    00000018                                 : strcmp.obj (.text)
+                  0000916c    00000016                                 : strchr.obj (.text)
+                  00009182    00000016                                 : strlen.obj (.text)
+                  00009198    00000014     cli.obj (.text:CLI_getMMWaveExtensionConfig)
+                  000091ac    00000014     mss_main.obj (.text:MmwDemo_mboxCallback)
+                  000091c0    00000014     libpinmux_xwr18xx.aer4f : pinmux.oer4f (.text:Pinmux_Lock)
+                  000091d4    00000014     libuart_xwr18xx.aer4f : uartsci.oer4f (.text:UartSci_disableTxDMA)
+                  000091e8    00000014                           : uartsci.oer4f (.text:UartSci_enableTxDMA)
+                  000091fc    00000014     rtsv7R4_T_le_v3D16_eabi.lib : _lock.obj (.text)
+                  00009210    00000014                                 : strcpy.obj (.text)
+                  00009224    00000012     Event_nonos.obj (.text:Event_create)
+                  00009236    00000012     SemaphoreP_nonos.obj (.text:SemaphoreP_delete)
+                  00009248    0000000e     MemoryP_nonos.obj (.text:MemoryP_ctrlFree)
+                  00009256    0000000e     rtsv7R4_T_le_v3D16_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  00009264    0000000c     HwiP_nonos.obj (.text:HwiP_disable)
+                  00009270    0000000c     HwiP_nonos.obj (.text:HwiP_restore)
+                  0000927c    0000000c     SemaphoreP_nonos.obj (.text:SemaphoreP_postFromISR)
+                  00009288    0000000c     libuart_xwr18xx.aer4f : UART.oer4f (.text:UART_Params_init)
+                  00009294    0000000c                           : uartsci_dma.oer4f (.text:UartSci_isDMAEnabled)
+                  000092a0    0000000c     rtsv7R4_T_le_v3D16_eabi.lib : copy_zero_init.obj (.text:decompress:ZI)
+                  000092ac    0000000a     libuart_xwr18xx.aer4f : UART.oer4f (.text:UART_close)
+                  000092b6    0000000a                           : UART.oer4f (.text:UART_read)
+                  000092c0    0000000a                           : UART.oer4f (.text:UART_write)
+                  000092ca    0000000a                           : UART.oer4f (.text:UART_writePolling)
+                  000092d4    0000000a     HwiP_nonos.obj (.text:switch_to_system_mode)
+                  000092de    00000006     rtsv7R4_T_le_v3D16_eabi.lib : atof.obj (.text)
+                  000092e4    00000004     mss_main.obj (.text:MmwDemo_sleep)
+                  000092e8    00000004     libsoc_xwr18xx.aer4f : soc_xwr18xx.oer4f (.text:SOC_ungateClock)
+                  000092ec    00000004     rtsv7R4_T_le_v3D16_eabi.lib : pre_init.obj (.text)
+
+.cinit     0    000092f0    00000a60     
+                  000092f0    00000a39     (.cinit..data.load) [load image]
+                  00009d29    00000003     --HOLE-- [fill = 0]
+                  00009d2c    0000000c     (__TI_handler_table)
+                  00009d38    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00009d40    00000010     (__TI_cinit_table)
+
+.const     0    00009d50    00000200     
+                  00009d50    00000101     rtsv7R4_T_le_v3D16_eabi.lib : ctype.obj (.const:.string:_ctypes_)
+                  00009e51    00000004     cli.obj (.const:.string:$P$T0$1)
+                  00009e55    00000003     --HOLE-- [fill = 0]
+                  00009e58    00000098     rtsv7R4_T_le_v3D16_eabi.lib : strtod.obj (.const:$O1$$)
+                  00009ef0    0000003c     libuart_xwr18xx.aer4f : UART.oer4f (.const:UART_defaultParams)
+                  00009f2c    00000024     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.const:Mailbox_defaultCfg)
+
+.stack     0    08000000    00002050     UNINITIALIZED
+                  08000000    00002050     --HOLE--
+
+.bss       0    08002050    00000e10     UNINITIALIZED
+                  08002050    00000200     sys_vim.obj (.tcmVimRam)
+                  08002250    00000444     (.common:gMmwMssMCB)
+                  08002694    000001a4     (.common:gCLI)
+                  08002838    00000194     (.common:gGPIOMCB)
+                  080029cc    00000120     rtsv7R4_T_le_v3D16_eabi.lib : trgmsg.obj (.bss:_CIOBUF_)
+                  08002aec    000000d4     (.common:message)
+                  08002bc0    000000cc     (.common:gCLIMMWaveControlCfg)
+                  08002c8c    000000a0     (.common:__TI_tmpnams)
+                  08002d2c    00000070     (.common:gEsmMCB)
+                  08002d9c    0000003c     (.common:uartParams)
+                  08002dd8    00000028     (.common:gCLIMMWaveOpenCfg)
+                  08002e00    00000028     (.common:gDevVersion)
+                  08002e28    0000001c     (.common:s_vim_nesting_handler)
+                  08002e44    0000000c     (.common:hwi)
+                  08002e50    00000008     (.common:parmbuf)
+                  08002e58    00000004     (.common:g_channelNum)
+                  08002e5c    00000004     (.common:matchingEvents)
+
+.data      0    08002e60    00000a31     UNINITIALIZED
+                  08002e60    00000600     HwiP_nonos.obj (.data:HwiP_dispatchTable)
+                  08003460    000000f0     rtsv7R4_T_le_v3D16_eabi.lib : defs.obj (.data:_ftable)
+                  08003550    00000080     HwiP_nonos.obj (.data:g_intToPriorityMap)
+                  080035d0    00000078     rtsv7R4_T_le_v3D16_eabi.lib : write.obj (.data:_device)
+                  08003648    00000058     libuart_xwr18xx.aer4f : uart_xwr18xx.oer4f (.data:gUartSciHwCfg)
+                  080036a0    00000050     rtsv7R4_T_le_v3D16_eabi.lib : write.obj (.data:_stream)
+                  080036f0    00000050     libmailbox_xwr18xx.aer4f : mailbox.oer4f (.data:gMailboxMCB)
+                  08003740    00000040     libsoc_xwr18xx.aer4f : soc_xwr18xx.oer4f (.data:SOC_TranslateAddr_LUT)
+                  08003780    00000028     libuart_xwr18xx.aer4f : uartsci.oer4f (.data:gUartSciFxnTable)
+                  080037a8    00000024                           : uart_xwr18xx.oer4f (.data:UART_config)
+                  080037cc    00000004     libpinmux_xwr18xx.aer4f : pinmux_xwr1xxx.oer4f (.data)
+                  080037d0    00000020     libsoc_xwr18xx.aer4f : soc_xwr18xx_mss.oer4f (.data:gSOCHwAttrib)
+                  080037f0    00000018     libmailbox_xwr18xx.aer4f : mailbox_xwr18xx.oer4f (.data:gMailboxMssBssHwCfg)
+                  08003808    00000018                              : mailbox_xwr18xx.oer4f (.data:gMailboxMssDssHwCfg)
+                  08003820    00000010     mss_main.obj (.data)
+                  08003830    00000010     rtsv7R4_T_le_v3D16_eabi.lib : defs.obj (.data)
+                  08003840    0000000c                                 : exit.obj (.data:$O1$$)
+                  0800384c    0000000c                                 : memory.obj (.data:$O1$$)
+                  08003858    0000000c     libesm_xwr18xx.aer4f : esm_xwr1xxx.oer4f (.data:gESMHwCfgAttrs)
+                  08003864    00000008     rtsv7R4_T_le_v3D16_eabi.lib : _lock.obj (.data:$O1$$)
+                  0800386c    00000008     libgpio_xwr18xx.aer4f : gpio_xwr18xx.oer4f (.data:gGPIOHwAtrrib)
+                  08003874    00000004     libuart_xwr18xx.aer4f : UART.oer4f (.data)
+                  08003878    00000004     rtsv7R4_T_le_v3D16_eabi.lib : errno.obj (.data)
+                  0800387c    00000004                                 : fopen.obj (.data)
+                  08003880    00000004                                 : open.obj (.data)
+                  08003884    00000004                                 : stkdepth_vars.obj (.data)
+                  08003888    00000004                                 : strtok.obj (.data)
+                  0800388c    00000004     sys_vim.obj (.data)
+                  08003890    00000001     HwiP_nonos.obj (.data)
+
+MODULE SUMMARY
+
+       Module                     code    ro data   rw data
+       ------                     ----    -------   -------
+    .\
+       cli.obj                    5166    4         876    
+       mss_main.obj               3747    0         1212   
+       sys_startup.obj            256     0         0      
+       sys_intvecs.obj            52      0         0      
+       sleep.obj                  36      0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     9257    4         2088   
+                                                           
+    .\osal_nonos\
+       sys_vim.obj                3054    0         544    
+       HwiP_nonos.obj             486     0         1681   
+       SemaphoreP_nonos.obj       248     0         0      
+       Event_nonos.obj            184     0         0      
+       MemoryP_nonos.obj          146     0         0      
+       DebugP_nonos.obj           62      0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     4180    0         2225   
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/dma/lib/libDMA_xwr18xx.aer4f
+       dma.oer4f                  1978    0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     1978    0         0      
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/esm/lib/libesm_xwr18xx.aer4f
+       esm.oer4f                  456     0         112    
+       esm_xwr1xxx.oer4f          0       0         12     
+    +--+--------------------------+-------+---------+---------+
+       Total:                     456     0         124    
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/gpio/lib/libgpio_xwr18xx.aer4f
+       gpio.oer4f                 886     0         404    
+       gpio_xwr18xx.oer4f         0       0         8      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     886     0         412    
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/mailbox/lib/libmailbox_xwr18xx.aer4f
+       mailbox.oer4f              1712    36        80     
+       mailbox_xwr18xx.oer4f      0       0         48     
+    +--+--------------------------+-------+---------+---------+
+       Total:                     1712    36        128    
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/pinmux/lib/libpinmux_xwr18xx.aer4f
+       pinmux.oer4f               390     0         0      
+       pinmux_xwr1xxx.oer4f       0       0         4      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     390     0         4      
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/lib/libsoc_xwr18xx.aer4f
+       soc_xwr18xx_mss.oer4f      1356    0         32     
+       soc_xwr18xx.oer4f          322     0         64     
+       soc.oer4f                  332     0         0      
+       soc_mpu.o                  182     0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     2192    0         96     
+                                                           
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/uart/lib/libuart_xwr18xx.aer4f
+       uartsci.oer4f              2192    0         40     
+       uartsci_dma.oer4f          642     0         0      
+       UART.oer4f                 160     60        4      
+       uart_xwr18xx.oer4f         0       0         124    
+    +--+--------------------------+-------+---------+---------+
+       Total:                     2994    60        168    
+                                                           
+    C:/ti/ti-cgt-arm_16.9.6.LTS/lib/rtsv7R4_T_le_v3D16_eabi.lib
+       _printfi.obj               4218    0         0      
+       memory.obj                 984     0         12     
+       ull_div32.obj              696     0         0      
+       strtod.obj                 484     152       0      
+       fopen.obj                  456     0         4      
+       defs.obj                   0       0         416    
+       trgmsg.obj                 108     0         288    
+       fputs.obj                  312     0         0      
+       ctype.obj                  0       257       0      
+       write.obj                  40      0         200    
+       s_scalbn.obj               236     0         0      
+       setvbuf.obj                220     0         0      
+       fflush.obj                 204     0         0      
+       open.obj                   188     0         4      
+       _io_perm.obj               174     0         0      
+       memcpy_t2.obj              156     0         0      
+       fclose.obj                 152     0         0      
+       fputc.obj                  152     0         0      
+       vsnprintf.obj              136     0         0      
+       memset_t2.obj              122     0         0      
+       getdevice.obj              116     0         0      
+       s_frexp.obj                116     0         0      
+       autoinit.obj               112     0         0      
+       boot.obj                   112     0         0      
+       printf.obj                 112     0         0      
+       copy_decompress_lzss.obj   108     0         0      
+       hostlseek.obj              104     0         0      
+       hostrename.obj             104     0         0      
+       fseek.obj                  100     0         0      
+       hostopen.obj               92      0         8      
+       sprintf.obj                100     0         0      
+       exit.obj                   80      0         12     
+       hostread.obj               92      0         0      
+       close.obj                  88      0         0      
+       hostwrite.obj              88      0         0      
+       ltoa.obj                   84      0         0      
+       atoi.obj                   80      0         0      
+       cpy_tbl.obj                76      0         0      
+       hostclose.obj              68      0         0      
+       hostunlink.obj             68      0         0      
+       strtok.obj                 64      0         4      
+       strncpy.obj                54      0         0      
+       unlink.obj                 44      0         0      
+       strspn.obj                 42      0         0      
+       lseek.obj                  40      0         0      
+       strcspn.obj                34      0         0      
+       memchr.obj                 32      0         0      
+       _lock.obj                  20      0         8      
+       memccpy.obj                28      0         0      
+       s_copysign.obj             26      0         0      
+       args_main.obj              24      0         0      
+       strcmp.obj                 24      0         0      
+       strchr.obj                 22      0         0      
+       strlen.obj                 22      0         0      
+       strcpy.obj                 20      0         0      
+       copy_decompress_none.obj   14      0         0      
+       copy_zero_init.obj         12      0         0      
+       atof.obj                   6       0         0      
+       errno.obj                  0       0         4      
+       pre_init.obj               4       0         0      
+       stkdepth_vars.obj          0       0         4      
+       mpu_init.obj               2       0         0      
+       startup.obj                2       0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     11474   409       964    
+                                                           
+       Heap:                      0       0         2048   
+       Stack:                     0       0         8272   
+       Linker Generated:          0       2653      0      
+    +--+--------------------------+-------+---------+---------+
+       Grand Total:               35519   3162      16529  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00009d40 records: 2, size/record: 8, table size: 16
+	.data: load addr=000092f0, load size=00000a39 bytes, run addr=08002e60, run size=00000a31 bytes, compression=copy
+	.bss: load addr=00009d38, load size=00000008 bytes, run addr=08002050, run size=00000e10 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00009d2c records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                             
+-------   ----                             
+08003824  BytesRcvd                        
+00008285  C$$EXIT                          
+00007af3  C$$IO$$                          
+00009199  CLI_getMMWaveExtensionConfig     
+00008fa9  CLI_getMMWaveExtensionOpenConfig 
+00003869  CLI_task_mod                     
+00008c35  CLI_write                        
+00006869  DMA_assignChannel                
+00005145  DMA_clearChannelInterruptFlag    
+00007911  DMA_disableChannel               
+00004f35  DMA_disableInterrupt             
+0000797d  DMA_enableChannel                
+00005805  DMA_enableInterrupt              
+0000818d  DMA_freeChannel                  
+000060e5  DMA_getChannelInterruptFlag      
+00003ebd  DMA_setChannelParams             
+00007fd5  ESM_highpriority_FIQ             
+0000690d  ESM_init                         
+00008f09  ESM_lowpriority_IRQ              
+00006515  ESM_processInterrupt             
+0000886f  Event_checkEvents                
+00009225  Event_create                     
+00008325  Event_pend                       
+000090c1  Event_post                       
+00006df1  GPIO_init                        
+00004755  GPIO_setConfig                   
+00005eb1  GPIO_write                       
+00008571  HOSTclose                        
+00007c69  HOSTlseek                        
+00007ec1  HOSTopen                         
+00007f1d  HOSTread                         
+00007cd1  HOSTrename                       
+000085b5  HOSTunlink                       
+00008135  HOSTwrite                        
+00008cdd  HwiP_Params_init                 
+00006719  HwiP_create                      
+00006a55  HwiP_delete                      
+00009265  HwiP_disable                     
+00009051  HwiP_disableInterrupt            
+0000892d  HwiP_dispatch                    
+08002e60  HwiP_dispatchTable               
+00009271  HwiP_restore                     
+00008d05  Mailbox_Config_init              
+00009f2c  Mailbox_defaultCfg               
+00007479  Mailbox_init                     
+00003609  Mailbox_open                     
+00005b71  Mailbox_read                     
+00007b99  Mailbox_readFlush                
+0000503d  Mailbox_write                    
+00007375  MemoryP_ctrlAlloc                
+00009249  MemoryP_ctrlFree                 
+00001c8d  MmwDemo_CLIInit                  
+00007c01  MmwDemo_Dss2MssISR               
+000091ad  MmwDemo_mboxCallback             
+00008bdd  MmwDemo_mboxWrite                
+000092e5  MmwDemo_sleep                    
+0000802d  MmwDemo_waitSensorStopComplete   
+000079e9  Pinmux_Set_FuncSel               
+000067c1  Pinmux_Set_OverrideCtrl          
+UNDEFED   SHT$$INIT_ARRAY$$Base            
+UNDEFED   SHT$$INIT_ARRAY$$Limit           
+0000620f  SOC_MPUAreRegionsSeparate        
+000061bb  SOC_MPUDisable                   
+000061ef  SOC_MPUDisableBackgroundRegion   
+0000619d  SOC_MPUEnable                    
+000061d9  SOC_MPUEnableBackgroundRegion    
+00006205  SOC_MPUGetNumberOfRegions        
+0000621d  SOC_MPUGetRegion                 
+00006229  SOC_MPUGetRegionBaseAddress      
+00006243  SOC_MPUGetRegionPermission       
+00006239  SOC_MPUGetRegionType             
+00006217  SOC_MPUSetRegion                 
+00006223  SOC_MPUSetRegionBaseAddress      
+0000624d  SOC_MPUSetRegionSizeRegister     
+0000622f  SOC_MPUSetRegionTypeAndPermission
+00008c5f  SOC_SystemISR                    
+08003740  SOC_TranslateAddr_LUT            
+00003049  SOC_deviceInit                   
+0000906d  SOC_getInAddr_LUTType            
+00008f89  SOC_getOutAddr_LUTType           
+000070c1  SOC_init                         
+00008e15  SOC_isMMWaveDSSOperational       
+0000852d  SOC_resetDMA                     
+00008ab9  SOC_setMMWaveMSSLinkState        
+0000714d  SOC_translateAddress             
+000092e9  SOC_ungateClock                  
+00008969  SOC_unhaltBSS                    
+00009089  SemaphoreP_Params_init           
+00007e01  SemaphoreP_create                
+00009237  SemaphoreP_delete                
+00008aed  SemaphoreP_pend                  
+00008c89  SemaphoreP_post                  
+0000927d  SemaphoreP_postFromISR           
+00009289  UART_Params_init                 
+000092ad  UART_close                       
+080037a8  UART_config                      
+00009ef0  UART_defaultParams               
+000089a5  UART_init                        
+00008b21  UART_open                        
+000092b7  UART_read                        
+000092c1  UART_write                       
+000092cb  UART_writePolling                
+00008085  UartSci_closeDMA                 
+00008e81  UartSci_disableRxDMA             
+000091d5  UartSci_disableTxDMA             
+00008ea3  UartSci_enableRxDMA              
+000091e9  UartSci_enableTxDMA              
+000071d9  UartSci_initiateRxDMA            
+00006e81  UartSci_initiateTxDMA            
+00009295  UartSci_isDMAEnabled             
+00006253  UartSci_openDMA                  
+000088ed  _DebugP_assert                   
+00008a4d  _MmwDemo_mssAssert               
+080029cc  __CIOBUF_                        
+08002050  __SP_ABT_MODE                    
+08000000  __SP_END_USER_MODE               
+08002030  __SP_FIQ_MODE                    
+08002020  __SP_IRQ_MODE                    
+08002010  __SP_SVC_MODE                    
+08002040  __SP_UDEF_MODE                   
+08002000  __SP_USER_MODE                   
+08002050  __STACK_END                      
+00002050  __STACK_SIZE                     
+00000800  __SYSMEM_SIZE                    
+00009d40  __TI_CINIT_Base                  
+00009d50  __TI_CINIT_Limit                 
+00009d2c  __TI_Handler_Table_Base          
+00009d38  __TI_Handler_Table_Limit         
+000077c1  __TI_auto_init                   
+0000435b  __TI_cleanup                     
+08003840  __TI_cleanup_ptr                 
+00006c29  __TI_closefile                   
+00007a55  __TI_decompress_lzss             
+00009257  __TI_decompress_none             
+00005de5  __TI_doflush                     
+08003844  __TI_dtors_ptr                   
+08003848  __TI_enable_exit_profile_output  
+08003830  __TI_ft_end                      
+ffffffff  __TI_pprof_out_hndl              
+000013d5  __TI_printfi                     
+ffffffff  __TI_prof_data_size              
+ffffffff  __TI_prof_data_start             
+000064c9  __TI_rd_ok                       
+00007af7  __TI_readmsg                     
+00000000  __TI_static_base__               
+08002c8c  __TI_tmpnams                     
+00007ac1  __TI_writemsg                    
+00006465  __TI_wrt_ok                      
+000092a1  __TI_zero_init                   
+00007571  __aeabi_memclr                   
+00007571  __aeabi_memclr4                  
+00007571  __aeabi_memclr8                  
+00006b8d  __aeabi_memcpy                   
+00006b8d  __aeabi_memcpy4                  
+00006b8d  __aeabi_memcpy8                  
+00007573  __aeabi_memset                   
+00007573  __aeabi_memset4                  
+00007573  __aeabi_memset8                  
+0800383c  __aeabi_stderr                   
+08003834  __aeabi_stdin                    
+08003838  __aeabi_stdout                   
+00003350  __aeabi_uldivmod                 
+ffffffff  __binit__                        
+08002e60  __bss_end                        
+08002050  __bss_start                      
+ffffffff  __c_args__                       
+08003891  __cinit_data_end                 
+08002e60  __cinit_data_start               
+00004cc3  __mpu_init                       
+08000000  __stack                          
+0000913d  _args_main                       
+00007830  _c_int00                         
+00000000  _c_int0000                       
+00009d50  _ctypes_                         
+080035d0  _device                          
+08003460  _ftable                          
+08003864  _lock                            
+0000920b  _nop                             
+00009203  _register_lock                   
+000091fd  _register_unlock                 
+080036a0  _stream                          
+000052a0  _sysDAbortEntry_                 
+0000001c  _sysFiqEntry_                    
+000052b4  _sysIrqEntry_                    
+00005260  _sysLoop_                        
+0000528c  _sysPrefetchEntry_               
+00005258  _sysResetEntry_                  
+00005278  _sysSvcEntry_                    
+00005264  _sysUndefEntry_                  
+00000410  _sys_memory                      
+000060e3  _system_post_cinit               
+000092ed  _system_pre_init                 
+08003868  _unlock                          
+00008289  abort                            
+000092df  atof                             
+00008235  atoi                             
+ffffffff  binit                            
+000025c3  calloc                           
+000080dd  close                            
+0800382c  cntComando                       
+0000863d  configureDSS                     
+0000840d  copy_in                          
+000090db  copysign                         
+000090db  copysignl                        
+00006fa1  enableDisableIrqFiq              
+08003878  errno                            
+00008291  exit                             
+00006c8f  fclose                           
+00005e31  fflush                           
+00007665  finddevice                       
+08003820  flag_primo_giro                  
+000043b1  fopen                            
+00006cc1  fputc                            
+00004dfd  fputs                            
+00002305  free                             
+00004387  freopen                          
+000076d9  frexp                            
+000076d9  frexpl                           
+00007d39  fseek                            
+08002694  gCLI                             
+08002bc0  gCLIMMWaveControlCfg             
+08002dd8  gCLIMMWaveOpenCfg                
+08002e00  gDevVersion                      
+08003858  gESMHwCfgAttrs                   
+08002d2c  gEsmMCB                          
+0800386c  gGPIOHwAtrrib                    
+08002838  gGPIOMCB                         
+080036f0  gMailboxMCB                      
+080037f0  gMailboxMssBssHwCfg              
+08003808  gMailboxMssDssHwCfg              
+08002250  gMmwMssMCB                       
+080037cc  gPinmuxRegs                      
+080037d0  gSOCHwAttrib                     
+08003780  gUartSciFxnTable                 
+08003648  gUartSciHwCfg                    
+08002e58  g_channelNum                     
+08003550  g_intToPriorityMap               
+00007693  getdevice                        
+08002e44  hwi                              
+00005719  ldexp                            
+00005719  ldexpl                           
+08003828  ledOn                            
+00008d7d  lseek                            
+000081e1  ltoa                             
+00004cc5  main                             
+08003884  main_func_sp                     
+0000229b  malloc                           
+08002e5c  matchingEvents                   
+000024d1  memalign                         
+000090a5  memccpy                          
+00008f49  memchr                           
+00006b8d  memcpy                           
+00007579  memset                           
+08002aec  message                          
+0000221d  minit                            
+00004b7d  mssCtrlPathTask                  
+000029a1  mssInitTask                      
+00006305  nonOsLoop                        
+00005f6d  open                             
+08002e50  parmbuf                          
+00004b7b  phantomInterrupt                 
+000078a9  printf                           
+00006cc1  putc                             
+00006d47  putchar                          
+00004f0d  puts                             
+000023c5  realloc                          
+00008c09  remove                           
+08002050  s_vimRAM                         
+08002e28  s_vim_nesting_handler            
+00005719  scalbn                           
+00005719  scalbnl                          
+000063b5  send_configuration               
+00008f69  sensorStart                      
+000082d5  sensorStop                       
+000058e5  setvbuf                          
+00008e5d  sleep_ms                         
+00007d9d  sprintf                          
+00007031  startProcedure                   
+000065c1  stopProcedure                    
+0000916d  strchr                           
+00009155  strcmp                           
+00009211  strcpy                           
+00008ec5  strcspn                          
+00009183  strlen                           
+00008a15  strncpy                          
+00008cb3  strspn                           
+000040ad  strtod                           
+0000867d  strtok                           
+000040ad  strtold                          
+000092d5  switch_to_system_mode            
+00005300  sys_dataAbtDisp                  
+000052ec  sys_prefAbtDisp                  
+00005314  sys_swiDisp                      
+000052d4  sys_udefAbtDisp                  
+08002d9c  uartParams                       
+00008c09  unlink                           
+000069b1  vimChannelMap                    
+0000666d  vimDisableInterrupt              
+00003ca9  vimEnableInterrupt               
+00004459  vimInit                          
+00008ee7  vimInterruptsInit                
+00000048  vimIrqDispatcher                 
+00005344  vimParityErrorHandler            
+0800388c  vimRAM                           
+00005a99  vimWakeupConfigSet               
+00007265  vsnprintf                        
+00008da5  write                            
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                             
+-------   ----                             
+00000000  __TI_static_base__               
+00000000  _c_int0000                       
+0000001c  _sysFiqEntry_                    
+00000048  vimIrqDispatcher                 
+00000410  _sys_memory                      
+00000800  __SYSMEM_SIZE                    
+000013d5  __TI_printfi                     
+00001c8d  MmwDemo_CLIInit                  
+00002050  __STACK_SIZE                     
+0000221d  minit                            
+0000229b  malloc                           
+00002305  free                             
+000023c5  realloc                          
+000024d1  memalign                         
+000025c3  calloc                           
+000029a1  mssInitTask                      
+00003049  SOC_deviceInit                   
+00003350  __aeabi_uldivmod                 
+00003609  Mailbox_open                     
+00003869  CLI_task_mod                     
+00003ca9  vimEnableInterrupt               
+00003ebd  DMA_setChannelParams             
+000040ad  strtod                           
+000040ad  strtold                          
+0000435b  __TI_cleanup                     
+00004387  freopen                          
+000043b1  fopen                            
+00004459  vimInit                          
+00004755  GPIO_setConfig                   
+00004b7b  phantomInterrupt                 
+00004b7d  mssCtrlPathTask                  
+00004cc3  __mpu_init                       
+00004cc5  main                             
+00004dfd  fputs                            
+00004f0d  puts                             
+00004f35  DMA_disableInterrupt             
+0000503d  Mailbox_write                    
+00005145  DMA_clearChannelInterruptFlag    
+00005258  _sysResetEntry_                  
+00005260  _sysLoop_                        
+00005264  _sysUndefEntry_                  
+00005278  _sysSvcEntry_                    
+0000528c  _sysPrefetchEntry_               
+000052a0  _sysDAbortEntry_                 
+000052b4  _sysIrqEntry_                    
+000052d4  sys_udefAbtDisp                  
+000052ec  sys_prefAbtDisp                  
+00005300  sys_dataAbtDisp                  
+00005314  sys_swiDisp                      
+00005344  vimParityErrorHandler            
+00005719  ldexp                            
+00005719  ldexpl                           
+00005719  scalbn                           
+00005719  scalbnl                          
+00005805  DMA_enableInterrupt              
+000058e5  setvbuf                          
+00005a99  vimWakeupConfigSet               
+00005b71  Mailbox_read                     
+00005de5  __TI_doflush                     
+00005e31  fflush                           
+00005eb1  GPIO_write                       
+00005f6d  open                             
+000060e3  _system_post_cinit               
+000060e5  DMA_getChannelInterruptFlag      
+0000619d  SOC_MPUEnable                    
+000061bb  SOC_MPUDisable                   
+000061d9  SOC_MPUEnableBackgroundRegion    
+000061ef  SOC_MPUDisableBackgroundRegion   
+00006205  SOC_MPUGetNumberOfRegions        
+0000620f  SOC_MPUAreRegionsSeparate        
+00006217  SOC_MPUSetRegion                 
+0000621d  SOC_MPUGetRegion                 
+00006223  SOC_MPUSetRegionBaseAddress      
+00006229  SOC_MPUGetRegionBaseAddress      
+0000622f  SOC_MPUSetRegionTypeAndPermission
+00006239  SOC_MPUGetRegionType             
+00006243  SOC_MPUGetRegionPermission       
+0000624d  SOC_MPUSetRegionSizeRegister     
+00006253  UartSci_openDMA                  
+00006305  nonOsLoop                        
+000063b5  send_configuration               
+00006465  __TI_wrt_ok                      
+000064c9  __TI_rd_ok                       
+00006515  ESM_processInterrupt             
+000065c1  stopProcedure                    
+0000666d  vimDisableInterrupt              
+00006719  HwiP_create                      
+000067c1  Pinmux_Set_OverrideCtrl          
+00006869  DMA_assignChannel                
+0000690d  ESM_init                         
+000069b1  vimChannelMap                    
+00006a55  HwiP_delete                      
+00006b8d  __aeabi_memcpy                   
+00006b8d  __aeabi_memcpy4                  
+00006b8d  __aeabi_memcpy8                  
+00006b8d  memcpy                           
+00006c29  __TI_closefile                   
+00006c8f  fclose                           
+00006cc1  fputc                            
+00006cc1  putc                             
+00006d47  putchar                          
+00006df1  GPIO_init                        
+00006e81  UartSci_initiateTxDMA            
+00006fa1  enableDisableIrqFiq              
+00007031  startProcedure                   
+000070c1  SOC_init                         
+0000714d  SOC_translateAddress             
+000071d9  UartSci_initiateRxDMA            
+00007265  vsnprintf                        
+00007375  MemoryP_ctrlAlloc                
+00007479  Mailbox_init                     
+00007571  __aeabi_memclr                   
+00007571  __aeabi_memclr4                  
+00007571  __aeabi_memclr8                  
+00007573  __aeabi_memset                   
+00007573  __aeabi_memset4                  
+00007573  __aeabi_memset8                  
+00007579  memset                           
+00007665  finddevice                       
+00007693  getdevice                        
+000076d9  frexp                            
+000076d9  frexpl                           
+000077c1  __TI_auto_init                   
+00007830  _c_int00                         
+000078a9  printf                           
+00007911  DMA_disableChannel               
+0000797d  DMA_enableChannel                
+000079e9  Pinmux_Set_FuncSel               
+00007a55  __TI_decompress_lzss             
+00007ac1  __TI_writemsg                    
+00007af3  C$$IO$$                          
+00007af7  __TI_readmsg                     
+00007b99  Mailbox_readFlush                
+00007c01  MmwDemo_Dss2MssISR               
+00007c69  HOSTlseek                        
+00007cd1  HOSTrename                       
+00007d39  fseek                            
+00007d9d  sprintf                          
+00007e01  SemaphoreP_create                
+00007ec1  HOSTopen                         
+00007f1d  HOSTread                         
+00007fd5  ESM_highpriority_FIQ             
+0000802d  MmwDemo_waitSensorStopComplete   
+00008085  UartSci_closeDMA                 
+000080dd  close                            
+00008135  HOSTwrite                        
+0000818d  DMA_freeChannel                  
+000081e1  ltoa                             
+00008235  atoi                             
+00008285  C$$EXIT                          
+00008289  abort                            
+00008291  exit                             
+000082d5  sensorStop                       
+00008325  Event_pend                       
+0000840d  copy_in                          
+0000852d  SOC_resetDMA                     
+00008571  HOSTclose                        
+000085b5  HOSTunlink                       
+0000863d  configureDSS                     
+0000867d  strtok                           
+0000886f  Event_checkEvents                
+000088ed  _DebugP_assert                   
+0000892d  HwiP_dispatch                    
+00008969  SOC_unhaltBSS                    
+000089a5  UART_init                        
+00008a15  strncpy                          
+00008a4d  _MmwDemo_mssAssert               
+00008ab9  SOC_setMMWaveMSSLinkState        
+00008aed  SemaphoreP_pend                  
+00008b21  UART_open                        
+00008bdd  MmwDemo_mboxWrite                
+00008c09  remove                           
+00008c09  unlink                           
+00008c35  CLI_write                        
+00008c5f  SOC_SystemISR                    
+00008c89  SemaphoreP_post                  
+00008cb3  strspn                           
+00008cdd  HwiP_Params_init                 
+00008d05  Mailbox_Config_init              
+00008d7d  lseek                            
+00008da5  write                            
+00008e15  SOC_isMMWaveDSSOperational       
+00008e5d  sleep_ms                         
+00008e81  UartSci_disableRxDMA             
+00008ea3  UartSci_enableRxDMA              
+00008ec5  strcspn                          
+00008ee7  vimInterruptsInit                
+00008f09  ESM_lowpriority_IRQ              
+00008f49  memchr                           
+00008f69  sensorStart                      
+00008f89  SOC_getOutAddr_LUTType           
+00008fa9  CLI_getMMWaveExtensionOpenConfig 
+00009051  HwiP_disableInterrupt            
+0000906d  SOC_getInAddr_LUTType            
+00009089  SemaphoreP_Params_init           
+000090a5  memccpy                          
+000090c1  Event_post                       
+000090db  copysign                         
+000090db  copysignl                        
+0000913d  _args_main                       
+00009155  strcmp                           
+0000916d  strchr                           
+00009183  strlen                           
+00009199  CLI_getMMWaveExtensionConfig     
+000091ad  MmwDemo_mboxCallback             
+000091d5  UartSci_disableTxDMA             
+000091e9  UartSci_enableTxDMA              
+000091fd  _register_unlock                 
+00009203  _register_lock                   
+0000920b  _nop                             
+00009211  strcpy                           
+00009225  Event_create                     
+00009237  SemaphoreP_delete                
+00009249  MemoryP_ctrlFree                 
+00009257  __TI_decompress_none             
+00009265  HwiP_disable                     
+00009271  HwiP_restore                     
+0000927d  SemaphoreP_postFromISR           
+00009289  UART_Params_init                 
+00009295  UartSci_isDMAEnabled             
+000092a1  __TI_zero_init                   
+000092ad  UART_close                       
+000092b7  UART_read                        
+000092c1  UART_write                       
+000092cb  UART_writePolling                
+000092d5  switch_to_system_mode            
+000092df  atof                             
+000092e5  MmwDemo_sleep                    
+000092e9  SOC_ungateClock                  
+000092ed  _system_pre_init                 
+00009d2c  __TI_Handler_Table_Base          
+00009d38  __TI_Handler_Table_Limit         
+00009d40  __TI_CINIT_Base                  
+00009d50  __TI_CINIT_Limit                 
+00009d50  _ctypes_                         
+00009ef0  UART_defaultParams               
+00009f2c  Mailbox_defaultCfg               
+08000000  __SP_END_USER_MODE               
+08000000  __stack                          
+08002000  __SP_USER_MODE                   
+08002010  __SP_SVC_MODE                    
+08002020  __SP_IRQ_MODE                    
+08002030  __SP_FIQ_MODE                    
+08002040  __SP_UDEF_MODE                   
+08002050  __SP_ABT_MODE                    
+08002050  __STACK_END                      
+08002050  __bss_start                      
+08002050  s_vimRAM                         
+08002250  gMmwMssMCB                       
+08002694  gCLI                             
+08002838  gGPIOMCB                         
+080029cc  __CIOBUF_                        
+08002aec  message                          
+08002bc0  gCLIMMWaveControlCfg             
+08002c8c  __TI_tmpnams                     
+08002d2c  gEsmMCB                          
+08002d9c  uartParams                       
+08002dd8  gCLIMMWaveOpenCfg                
+08002e00  gDevVersion                      
+08002e28  s_vim_nesting_handler            
+08002e44  hwi                              
+08002e50  parmbuf                          
+08002e58  g_channelNum                     
+08002e5c  matchingEvents                   
+08002e60  HwiP_dispatchTable               
+08002e60  __bss_end                        
+08002e60  __cinit_data_start               
+08003460  _ftable                          
+08003550  g_intToPriorityMap               
+080035d0  _device                          
+08003648  gUartSciHwCfg                    
+080036a0  _stream                          
+080036f0  gMailboxMCB                      
+08003740  SOC_TranslateAddr_LUT            
+08003780  gUartSciFxnTable                 
+080037a8  UART_config                      
+080037cc  gPinmuxRegs                      
+080037d0  gSOCHwAttrib                     
+080037f0  gMailboxMssBssHwCfg              
+08003808  gMailboxMssDssHwCfg              
+08003820  flag_primo_giro                  
+08003824  BytesRcvd                        
+08003828  ledOn                            
+0800382c  cntComando                       
+08003830  __TI_ft_end                      
+08003834  __aeabi_stdin                    
+08003838  __aeabi_stdout                   
+0800383c  __aeabi_stderr                   
+08003840  __TI_cleanup_ptr                 
+08003844  __TI_dtors_ptr                   
+08003848  __TI_enable_exit_profile_output  
+08003858  gESMHwCfgAttrs                   
+08003864  _lock                            
+08003868  _unlock                          
+0800386c  gGPIOHwAtrrib                    
+08003878  errno                            
+08003884  main_func_sp                     
+0800388c  vimRAM                           
+08003891  __cinit_data_end                 
+ffffffff  __TI_pprof_out_hndl              
+ffffffff  __TI_prof_data_size              
+ffffffff  __TI_prof_data_start             
+ffffffff  __binit__                        
+ffffffff  __c_args__                       
+ffffffff  binit                            
+UNDEFED   SHT$$INIT_ARRAY$$Base            
+UNDEFED   SHT$$INIT_ARRAY$$Limit           
+
+[307 symbols]

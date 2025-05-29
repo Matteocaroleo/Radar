@@ -1,0 +1,1809 @@
+******************************************************************************
+               TMS320C6x Linker PC v8.3.3                      
+******************************************************************************
+>> Linked Mon May 12 23:35:56 2025
+
+OUTPUT FILE NAME:   <AWR1843_MMR_dss_version_1.xe674>
+ENTRY POINT SYMBOL: "_c_int00"  address: 007f5fe0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  L2SRAM_UMAP1          007e0000   00020000  0001d300  00002d00  RWIX
+  L2SRAM_UMAP0          00800000   00020000  00014a6d  0000b593  RWIX
+  L1PSRAM               00e00000   00004000  00000000  00004000  RWIX
+  L1DSRAM               00f00000   00004000  00004000  00000000  RWIX
+  L3SRAM                20000000   00100000  000006c0  000ff940  RWIX
+  HSRAM                 21080000   00008000  00008000  00000000  RWIX
+
+PAGE 1:
+  L3SRAM                20000000   00100000  00100000  00000000  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+007e0000    007e0000    00019300   00019300    r-x
+  007e0000    007e0000    00000020   00000020    r-x .vector0
+  007e0020    007e0020    00000020   00000020    r-x .vector1
+  007e0040    007e0040    00000020   00000020    r-x .vector2
+  007e0060    007e0060    00000020   00000020    r-x .vector3
+  007e0080    007e0080    00000020   00000020    r-x .vector4
+  007e00a0    007e00a0    00000020   00000020    r-x .vector5
+  007e00c0    007e00c0    00000020   00000020    r-x .vector6
+  007e00e0    007e00e0    00000020   00000020    r-x .vector7
+  007e0100    007e0100    00000020   00000020    r-x .vector8
+  007e0120    007e0120    00000020   00000020    r-x .vector9
+  007e0140    007e0140    00000020   00000020    r-x .vector10
+  007e0160    007e0160    00000020   00000020    r-x .vector11
+  007e0180    007e0180    00000020   00000020    r-x .vector12
+  007e01a0    007e01a0    00000020   00000020    r-x .vector13
+  007e01c0    007e01c0    00000020   00000020    r-x .vector14
+  007e01e0    007e01e0    000000e0   000000e0    r-x .vector15
+  007e02c0    007e02c0    00019040   00019040    r-x .text
+007f9300    007f9300    00004000   00000000    rw-
+  007f9300    007f9300    00004000   00000000    rw- .sysmem
+00800000    00800000    00010000   00000000    rw-
+  00800000    00800000    0000c000   00000000    rw- .l2data
+  0080c000    0080c000    00004000   00000000    rw- .stack
+00810000    00810000    00002308   00002308    r--
+  00810000    00810000    00002308   00002308    r-- .const
+00812308    00812308    00001608   00000000    rw-
+  00812308    00812308    00001608   00000000    rw- .far
+00813910    00813910    00000ea8   00000ea8    rw-
+  00813910    00813910    00000ea8   00000ea8    rw- .fardata
+008147b8    008147b8    00000154   00000154    r--
+  008147b8    008147b8    00000154   00000154    r-- .switch
+00814910    00814910    00000120   00000000    rw-
+  00814910    00814910    00000120   00000000    rw- .cio
+00814a30    00814a30    00000044   00000031    rw-
+  00814a30    00814a30    00000031   00000031    rw- .neardata
+  00814a64    00814a64    00000010   00000000    rw- .bss
+00f00000    00f00000    00004000   00000000    rw-
+  00f00000    00f00000    00004000   00000000    rw- .l1data
+20000000    20000000    000006c0   000006c0    r-x
+  20000000    20000000    000006c0   000006c0    r-x .overlay
+21080000    21080000    00008000   00000000    rw-
+  21080000    21080000    00008000   00000000    rw- .demoSharedMem
+20000000    20000000    00100000   00000000    rw-
+  20000000    20000000    00100000   00000000    rw- .l3data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.vector0   0    007e0000    00000020     
+                  007e0000    00000020     intvecs.oe674 (.vector0)
+
+.vector1   0    007e0020    00000020     
+                  007e0020    00000020     intvecs.oe674 (.vector1)
+
+.vector2   0    007e0040    00000020     
+                  007e0040    00000020     intvecs.oe674 (.vector2)
+
+.vector3   0    007e0060    00000020     
+                  007e0060    00000020     intvecs.oe674 (.vector3)
+
+.vector4   0    007e0080    00000020     
+                  007e0080    00000020     intvecs.oe674 (.vector4)
+
+.vector5   0    007e00a0    00000020     
+                  007e00a0    00000020     intvecs.oe674 (.vector5)
+
+.vector6   0    007e00c0    00000020     
+                  007e00c0    00000020     intvecs.oe674 (.vector6)
+
+.vector7   0    007e00e0    00000020     
+                  007e00e0    00000020     intvecs.oe674 (.vector7)
+
+.vector8   0    007e0100    00000020     
+                  007e0100    00000020     intvecs.oe674 (.vector8)
+
+.vector9   0    007e0120    00000020     
+                  007e0120    00000020     intvecs.oe674 (.vector9)
+
+.vector10 
+*          0    007e0140    00000020     
+                  007e0140    00000020     intvecs.oe674 (.vector10)
+
+.vector11 
+*          0    007e0160    00000020     
+                  007e0160    00000020     intvecs.oe674 (.vector11)
+
+.vector12 
+*          0    007e0180    00000020     
+                  007e0180    00000020     intvecs.oe674 (.vector12)
+
+.vector13 
+*          0    007e01a0    00000020     
+                  007e01a0    00000020     intvecs.oe674 (.vector13)
+
+.vector14 
+*          0    007e01c0    00000020     
+                  007e01c0    00000020     intvecs.oe674 (.vector14)
+
+.vector15 
+*          0    007e01e0    000000e0     
+                  007e01e0    000000e0     intvecs.oe674 (.vector15)
+
+.stack     0    0080c000    00004000     UNINITIALIZED
+                  0080c000    00000008     rts6740_elf.lib : boot.c.obj (.stack)
+                  0080c008    00003ff8     --HOLE--
+
+.neardata 
+*          0    00814a30    00000031     
+                  00814a30    00000018     dss_data_path.oe674 (.neardata)
+                  00814a48    0000000c     dss_main.oe674 (.neardata)
+                  00814a54    00000004     libadcbuf_xwr18xx.ae674 : ADCBuf.oe674 (.neardata)
+                  00814a58    00000004     libcrc_xwr18xx.ae674 : crc_xwr18xx.oe674 (.neardata)
+                  00814a5c    00000004     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.neardata)
+                  00814a60    00000001     HwiP_nonos.oe674 (.neardata)
+
+.bss       0    00814a64    00000010     UNINITIALIZED
+                  00814a64    00000006     dss_data_path.oe674 (.bss)
+                  00814a6a    00000002     --HOLE--
+                  00814a6c    00000004     (.common:g_MailboxInterruptFunc)
+                  00814a70    00000004     (.common:g_channelNum)
+
+.cinit     0    00800000    00000000     UNINITIALIZED
+
+.far       0    00812308    00001608     UNINITIALIZED
+                  00812308    00000b38     (.common:gMmwDssMCB)
+                  00812e40    000006f8     libedma_xwr18xx.ae674 : edma.oe674 (.far:EDMA_object)
+                  00813538    00000200     interrupt.oe674 (.far:c674xECMtbl)
+                  00813738    00000140     (.common:__TI_tmpnams)
+                  00813878    00000040     interrupt.oe674 (.far:c674xISRtbl)
+                  008138b8    0000001c     (.common:gMmwaveLinkMCB)
+                  008138d4    00000014     (.common:gCycleLog)
+                  008138e8    00000010     (.common:edmaDbg)
+                  008138f8    0000000c     (.common:hwi)
+                  00813904    00000004     --HOLE--
+                  00813908    00000008     (.common:parmbuf)
+
+.l1data    0    00f00000    00004000     UNINITIALIZED
+                  00f00000    00004000     dss_data_path.oe674 (.l1data)
+
+.demoSharedMem 
+*          0    21080000    00008000     UNINITIALIZED
+                  21080000    00008000     dss_main.oe674 (.demoSharedMem)
+
+.l3data    1    20000000    00100000     UNINITIALIZED
+                  20000000    00100000     dss_data_path.oe674 (.l3data)
+
+.overlay   0    20000000    000006c0     
+                  20000000    00000340     dss_main.oe674 (.text:dssInitTask)
+                  20000340    000000a0     dss_main.oe674 (.text:main)
+                  200003e0    00000140     dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+                  20000520    00000010     libedma_xwr18xx.ae674 : edma.oe674 ($Tramp$S$$EDMA_configErrorMonitoring)
+                  20000530    00000010                           : edma.oe674 ($Tramp$S$$EDMA_open)
+                  20000540    00000010                           : edma.oe674 ($Tramp$S$$EDMA_init)
+                  20000550    00000010                           : edma.oe674 ($Tramp$S$$EDMA_getNumInstances)
+                  20000560    00000010     dss_main.oe674 ($Tramp$S$$Cycleprofiler_init)
+                  20000570    00000010     libsoc_xwr18xx.ae674 : soc.oe674 ($Tramp$S$$SOC_init)
+                  20000580    00000010     dss_main.oe674 ($Tramp$S$$nonOsLoop)
+                  20000590    00000010     dss_main.oe674 ($Tramp$S$$dssDataPathInit)
+                  200005a0    00000010     rts6740_elf.lib : memset.c.obj ($Tramp$S$$memset)
+                  200005b0    00000010     mmw_link.oe674 ($Tramp$S$$MmwaveLink_getVersion)
+                  200005c0    00000010     dss_main.oe674 ($Tramp$S$$dssStatusInfo)
+                  200005d0    00000010     mmw_link.oe674 ($Tramp$S$$MmwaveLink_getRfBootupStatus)
+                  200005e0    00000010     DebugP_nonos.oe674 ($Tramp$S$$_DebugP_assert)
+                  200005f0    00000010     dss_main.oe674 ($Tramp$S$$_MmwDemo_dssAssert)
+                  20000600    00000010     mmw_link.oe674 ($Tramp$S$$MmwaveLink_initLink)
+                  20000610    00000010     dss_main.oe674 ($Tramp$S$$mboxWrite)
+                  20000620    00000010     libsoc_xwr18xx.ae674 : soc_xwr18xx.oe674 ($Tramp$S$$SOC_isMMWaveMSSOperational)
+                  20000630    00000010     dss_main.oe674 ($Tramp$S$$MmwDemo_dataPathInitVitalSignsToDefault)
+                  20000640    00000010     Event_nonos.oe674 ($Tramp$S$$Event_create)
+                  20000650    00000010     libsoc_xwr18xx.ae674 : soc_xwr18xx.oe674 ($Tramp$S$$SOC_setMMWaveDSSLinkState)
+                  20000660    00000010     rts6740_elf.lib : printf.c.obj ($Tramp$S$$printf)
+                  20000670    00000010     libmailbox_xwr18xx.ae674 : mailbox.oe674 ($Tramp$S$$Mailbox_open)
+                  20000680    00000010                              : mailbox.oe674 ($Tramp$S$$Mailbox_Config_init)
+                  20000690    00000010     SemaphoreP_nonos.oe674 ($Tramp$S$$SemaphoreP_create)
+                  200006a0    00000010     SemaphoreP_nonos.oe674 ($Tramp$S$$SemaphoreP_Params_init)
+                  200006b0    00000010     libmailbox_xwr18xx.ae674 : mailbox.oe674 ($Tramp$S$$Mailbox_init)
+
+.text      0    007e02c0    00019040     
+                  007e02c0    00002040     rts6740_elf.lib : _printfi.c.obj (.text:__TI_printfi)
+                  007e2300    00000960     dss_main.oe674 (.text:parseProfileAndChirpConfig)
+                  007e2c60    00000680     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUF_MMWave_control)
+                  007e32e0    00000660     rts6740_elf.lib : _printfi.c.obj (.text:_pconv_a)
+                  007e3940    000005e0                     : divd.c.obj (.text:__c6xabi_divd)
+                  007e3f20    000005a0     dss_main.oe674 (.text:MmwDemo_dssSendProcessOutputToMSS)
+                  007e44c0    00000580     dss_data_path.oe674 (.text:genWindow)
+                  007e4a40    00000520     dss_data_path.oe674 (.text:MmwDemo_dataPathConfigBuffers)
+                  007e4f60    00000520     dss_data_path.oe674 (.text:MmwDemo_gen_twiddle_fft16x16_fast)
+                  007e5480    00000480     dss_main.oe674 (.text:ConfigRadarSS)
+                  007e5900    00000420     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_open)
+                  007e5d20    00000400     rts6740_elf.lib : _printfi.c.obj (.text:_pconv_g)
+                  007e6120    00000400     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverRxHdrRead)
+                  007e6520    000003e0     dss_main.oe674 (.text:dssDataPathConfigAdcBuf)
+                  007e6900    000003c0     rts6740_elf.lib : memory.c.obj (.text:free)
+                  007e6cc0    000003a0     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_paramConfig_assist)
+                  007e7060    00000380     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_open)
+                  007e73e0    00000360     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverMsgRead)
+                  007e7740    00000340     dss_data_path.oe674 (.text:MmwDemo_dataPathConfigEdma)
+                  007e7a80    00000320     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_configChannel)
+                  007e7da0    00000320     rts6740_elf.lib : cos.c.obj (.text:cos)
+                  007e80c0    00000320                     : fputs.c.obj (.text:fputs)
+                  007e83e0    00000320     dss_data_path.oe674 (.text:interFrameProcessing)
+                  007e8700    00000300     dsplib.ae64P : DSP_fft16x16_sa.oe64P (.text:psa)
+                  007e8a00    000002e0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverCmdSendRetry)
+                  007e8ce0    000002c0     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_configErrorMonitoring)
+                  007e8fa0    000002c0                           : edma.oe674 (.text:EDMA_open)
+                  007e9260    000002c0     dss_main.oe674 (.text:mboxReadTask)
+                  007e9520    000002c0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverCmdInvoke)
+                  007e97e0    000002a0     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_computeSignature)
+                  007e9a80    000002a0     mmw_link.oe674 (.text:MmwaveLink_initLink)
+                  007e9d20    000002a0     rts6740_elf.lib : _printfi.c.obj (.text:_pconv_e)
+                  007e9fc0    000002a0                     : _printfi.c.obj (.text:fcvt)
+                  007ea260    00000280                     : divf.c.obj (.text:__c6xabi_divf)
+                  007ea4e0    00000260                     : imath64.c.obj (.text:__c6xabi_divull)
+                  007ea740    00000260     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverInit)
+                  007ea9a0    00000240     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_transferComplete_isr)
+                  007eabe0    00000240     dss_main.oe674 (.text:dssDataPathTask)
+                  007eae20    00000240     dss_data_path.oe674 (.text:interChirpProcessing)
+                  007eb060    00000220     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_write)
+                  007eb280    00000220     dss_data_path.oe674 (.text:MmwDemo_dataPathInitVitalSignsAndMonitor)
+                  007eb4a0    00000200     rts6740_elf.lib : _printfi.c.obj (.text:_ltostr)
+                  007eb6a0    00000200     dss_main.oe674 (.text:asyncEventHandler)
+                  007eb8a0    00000200     rts6740_elf.lib : atan.c.obj (.text:atan)
+                  007ebaa0    000001e0     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_init)
+                  007ebc80    000001e0     interrupt.oe674 (.text:IntEventCombineInit)
+                  007ebe60    000001e0     dss_main.oe674 (.text:dssDataPathProcessEvents)
+                  007ec040    000001e0     libmmwavealg_xwr18xx.ae674 : mmwavelib_windowing.oe674 (.text:mmwavelib_windowing16x16_evenlen)
+                  007ec220    000001e0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverRdVerifyMsg)
+                  007ec400    000001c0     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_read)
+                  007ec5c0    000001c0     rts6740_elf.lib : imath40.c.obj (.text:__c6xabi_divul)
+                  007ec780    000001c0                     : atan2.c.obj (.text:atan2)
+                  007ec940    000001c0     dss_data_path.oe674 (.text:chirpProcess)
+                  007ecb00    000001c0     rts6740_elf.lib : fputc.c.obj (.text:fputc)
+                  007eccc0    000001c0                     : frexp.c.obj (.text:frexp)
+                  007ece80    000001c0                     : memory.c.obj (.text:malloc)
+                  007ed040    000001c0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverMsgCmdReply)
+                  007ed200    000001c0     rts6740_elf.lib : setvbuf.c.obj (.text:setvbuf)
+                  007ed3c0    000001a0     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUF_MMWave_open)
+                  007ed560    000001a0     rts6740_elf.lib : hostrename.c.obj (.text:HOSTrename)
+                  007ed700    000001a0     dss_main.oe674 (.text:dssDataPathInit)
+                  007ed8a0    000001a0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverDeInit)
+                  007eda40    000001a0                                 : rl_driver.oe674 (.text:rlDriverMsgWrite)
+                  007edbe0    000001a0                                 : rl_sensor.oe674 (.text:rlSetChirpConfig)
+                  007edd80    00000180     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUFCmdParamCheck)
+                  007edf00    00000180     mmw_link.oe674 (.text:MmwaveLink_getVersion)
+                  007ee080    00000180     rts6740_elf.lib : ldexp.c.obj (.text:ldexp)
+                  007ee200    00000180     libmmwavelink_xwr18xx.ae674 : rl_sensor.oe674 (.text:rlSetProfileConfig)
+                  007ee380    00000160     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_getErrorStatusInfo)
+                  007ee4e0    00000160     dss_config_edma_util.oe674 (.text:EDMAutil_configType1)
+                  007ee640    00000160     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_close)
+                  007ee7a0    00000160     mmw_link.oe674 (.text:MmwaveLink_computeCRC)
+                  007ee900    00000160     libsoc_xwr18xx.ae674 : soc.oe674 (.text:SOC_registerSysIntListener)
+                  007eea60    00000160     dss_main.oe674 (.text:dssDataPathConfig)
+                  007eebc0    00000160     dss_vitalSignsDemo_utilsFunc.oe674 (.text:filter_IIR_BiquadCascade)
+                  007eed20    00000160     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverMsgReadCmdCtx)
+                  007eee80    00000160                                 : rl_driver.oe674 (.text:rlDriverWaitForResponse)
+                  007eefe0    00000160                                 : rl_sensor.oe674 (.text:rlSetFrameConfig)
+                  007ef140    00000140     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.text:EDMA3Init)
+                  007ef280    00000140                           : edma.oe674 (.text:EDMA_clearErrors)
+                  007ef3c0    00000140     libsoc_xwr18xx.ae674 : soc.oe674 (.text:SOC_init)
+                  007ef500    00000140     interrupt.oe674 (.text:_c674x_mask_int10_isr)
+                  007ef640    00000140     interrupt.oe674 (.text:_c674x_mask_int11_isr)
+                  007ef780    00000140     interrupt.oe674 (.text:_c674x_mask_int12_isr)
+                  007ef8c0    00000140     interrupt.oe674 (.text:_c674x_mask_int13_isr)
+                  007efa00    00000140     interrupt.oe674 (.text:_c674x_mask_int14_isr)
+                  007efb40    00000140     interrupt.oe674 (.text:_c674x_mask_int15_isr)
+                  007efc80    00000140     interrupt.oe674 (.text:_c674x_mask_int4_isr)
+                  007efdc0    00000140     interrupt.oe674 (.text:_c674x_mask_int5_isr)
+                  007eff00    00000140     interrupt.oe674 (.text:_c674x_mask_int6_isr)
+                  007f0040    00000140     interrupt.oe674 (.text:_c674x_mask_int7_isr)
+                  007f0180    00000140     interrupt.oe674 (.text:_c674x_mask_int8_isr)
+                  007f02c0    00000140     interrupt.oe674 (.text:_c674x_mask_int9_isr)
+                  007f0400    00000140     interrupt.oe674 (.text:_c674x_nmi_isr)
+                  007f0540    00000140     interrupt.oe674 (.text:_c674x_rsvd_int2_isr)
+                  007f0680    00000140     interrupt.oe674 (.text:_c674x_rsvd_int3_isr)
+                  007f07c0    00000140     dss_main.oe674 (.text:nonOsLoop)
+                  007f0900    00000140     libmmwavelink_xwr18xx.ae674 : rl_device.oe674 (.text:rlDevicePowerOn)
+                  007f0a40    00000140                                 : rl_driver.oe674 (.text:rlDriverMsgReadSpawnCtx)
+                  007f0b80    00000140                                 : rl_sensor.oe674 (.text:rlSetAdvFrameConfig)
+                  007f0cc0    00000120     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUF_MMWave_getChanBufAddr)
+                  007f0de0    00000120     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_configParamSet)
+                  007f0f00    00000120     rts6740_elf.lib : _printfi.c.obj (.text:_pconv_f)
+                  007f1020    00000120                     : getdevice.c.obj (.text:getdevice)
+                  007f1140    00000120     mathlib.ae674 : cossp.oe674 (.text:optasm)
+                  007f1260    00000120                   : sinsp.oe674 (.text:optasm)
+                  007f1380    00000120     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverAsyncEventHandler)
+                  007f14a0    00000120                                 : rl_driver.oe674 (.text:rlDriverProcRdMsg)
+                  007f15c0    00000100     dss_config_edma_util.oe674 (.text:EDMA_setup_shadow_link)
+                  007f16c0    00000100     interrupt.oe674 (.text:IntEventCombinerDispatch)
+                  007f17c0    00000100     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_readFlush)
+                  007f18c0    00000100     libsoc_xwr18xx.ae674 : soc_xwr18xx_dss.oe674 (.text:SOC_deviceInit)
+                  007f19c0    00000100                          : soc_xwr18xx.oe674 (.text:SOC_translateAddress)
+                  007f1ac0    00000100     rts6740_elf.lib : fclose.c.obj (.text:__TI_closefile)
+                  007f1bc0    00000100                     : _printfi.c.obj (.text:_mcpy)
+                  007f1cc0    00000100                     : atoi.c.obj (.text:atoi)
+                  007f1dc0    00000100                     : fseek.c.obj (.text:fseek)
+                  007f1ec0    00000100     libmmwavelink_xwr18xx.ae674 : rl_device.oe674 (.text:rlDeviceGetVersion)
+                  007f1fc0    00000100                                 : rl_device.oe674 (.text:rlDevicePowerOff)
+                  007f20c0    00000100                                 : rl_driver.oe674 (.text:rlDriverClientCbCheck)
+                  007f21c0    00000100                                 : rl_driver.oe674 (.text:rlDriverOsiCbCheck)
+                  007f22c0    000000e0     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_getTransactionId)
+                  007f23a0    000000e0     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_error_isr)
+                  007f2480    000000e0                           : edma.oe674 (.text:EDMA_isTransferComplete)
+                  007f2560    000000e0     dss_config_edma_util.oe674 (.text:EDMAutil_setAndTrigger)
+                  007f2640    000000e0     rts6740_elf.lib : hostlseek.c.obj (.text:HOSTlseek)
+                  007f2720    000000e0                     : hostopen.c.obj (.text:HOSTopen)
+                  007f2800    000000e0                     : hostwrite.c.obj (.text:HOSTwrite)
+                  007f28e0    000000e0     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_boxFullISRMssDss)
+                  007f29c0    000000e0                              : mailbox.oe674 (.text:Mailbox_init)
+                  007f2aa0    000000e0     rts6740_elf.lib : _ltoa.c.obj (.text:__TI_ltoa)
+                  007f2b80    000000e0                     : _io_perm.c.obj (.text:__TI_wrt_ok)
+                  007f2c60    000000e0                     : divi.asm.obj (.text:__divi)
+                  007f2d40    000000e0     dss_main.oe674 (.text:cfgUpdate)
+                  007f2e20    000000e0     rts6740_elf.lib : close.c.obj (.text:close)
+                  007f2f00    000000e0                     : exit.c.obj (.text:exit)
+                  007f2fe0    000000e0                     : memset.c.obj (.text:memset)
+                  007f30c0    000000e0                     : printf.c.obj (.text:printf)
+                  007f31a0    000000e0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverHostIrqHandler)
+                  007f3280    000000e0                                 : rl_driver.oe674 (.text:rlDriverValidateHdr)
+                  007f3360    000000e0     dss_vitalSignsDemo_utilsFunc.oe674 (.text:unwrap)
+                  007f3440    000000c0     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_getSignature)
+                  007f3500    000000c0     libedma_xwr18xx.ae674 : edma.oe674 (.text:EDMA_startDmaTransfer)
+                  007f35c0    000000c0     rts6740_elf.lib : hostread.c.obj (.text:HOSTread)
+                  007f3680    000000c0                     : hostunlink.c.obj (.text:HOSTunlink)
+                  007f3740    000000c0     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_boxFullISRProcessing)
+                  007f3800    000000c0     mmw_link.oe674 (.text:MmwaveLink_mboxOpen)
+                  007f38c0    000000c0     mmw_link.oe674 (.text:MmwaveLink_setCalMonConfig)
+                  007f3980    000000c0     rts6740_elf.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  007f3a40    000000c0                     : fflush.c.obj (.text:__TI_doflush)
+                  007f3b00    000000c0                     : divu.asm.obj (.text:__divu)
+                  007f3bc0    000000c0                     : remi.asm.obj (.text:__remi)
+                  007f3c80    000000c0     dss_main.oe674 (.text:dssFrameStartIntHandler)
+                  007f3d40    000000c0     rts6740_elf.lib : modf.c.obj (.text:modf)
+                  007f3e00    000000c0                     : memory.c.obj (.text:mremove)
+                  007f3ec0    000000c0     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverCalChkSum)
+                  007f3f80    000000c0                                 : rl_driver.oe674 (.text:rlDriverExecuteGetApi)
+                  007f4040    000000c0                                 : rl_driver.oe674 (.text:rlDriverExecuteSetApi)
+                  007f4100    000000c0                                 : rl_controller.oe674 (.text:rlGetSubBlock)
+                  007f41c0    000000c0     rts6740_elf.lib : tls.c.obj (.text:tls:init:__TI_tls_init)
+                  007f4280    000000a0     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.text:EDMA3EnableChInShadowReg)
+                  007f4320    000000a0                           : edma.oe674 (.text:EDMA_disableChannel)
+                  007f43c0    000000a0                           : edma.oe674 (.text:EDMA_enableChannel)
+                  007f4460    000000a0                           : edma.oe674 (.text:EDMA_transferController_error_isr)
+                  007f4500    000000a0     rts6740_elf.lib : hostclose.c.obj (.text:HOSTclose)
+                  007f45a0    000000a0     HwiP_nonos.oe674 (.text:HwiP_create)
+                  007f4640    000000a0     interrupt.oe674 (.text:IntEventMap)
+                  007f46e0    000000a0     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_boxEmptyISRProcessing)
+                  007f4780    000000a0     dss_data_path.oe674 (.text:MmwDemo_dataPathWait1DOutputData)
+                  007f4820    000000a0     mmw_link.oe674 (.text:MmwaveLink_getRfBootupStatus)
+                  007f48c0    000000a0     mmw_link.oe674 (.text:MmwaveLink_sensorStop)
+                  007f4960    000000a0     mmw_link.oe674 (.text:MmwaveLink_setBpmCommonConfig)
+                  007f4a00    000000a0     libsoc_xwr18xx.ae674 : soc.oe674 (.text:SOC_SystemISR)
+                  007f4aa0    000000a0     SemaphoreP_nonos.oe674 (.text:SemaphoreP_create)
+                  007f4b40    000000a0     dss_main.oe674 (.text:_MmwDemo_dssAssert)
+                  007f4be0    000000a0     rts6740_elf.lib : fopen.c.obj (.text:__TI_cleanup)
+                  007f4c80    000000a0                     : fixfu.c.obj (.text:__c6xabi_fixfu)
+                  007f4d20    000000a0                     : round.c.obj (.text:__c6xabi_nround)
+                  007f4dc0    000000a0                     : remu.asm.obj (.text:__remu)
+                  007f4e60    000000a0                     : _printfi.c.obj (.text:_ecpy)
+                  007f4f00    000000a0     dss_main.oe674 (.text:dataPathAdcBufInit)
+                  007f4fa0    000000a0     dss_main.oe674 (.text:dssChirpIntHandler)
+                  007f5040    000000a0     rts6740_elf.lib : getdevice.c.obj (.text:finddevice)
+                  007f50e0    000000a0                     : memcpy64.asm.obj (.text:memcpy)
+                  007f5180    000000a0                     : memory.c.obj (.text:minsert)
+                  007f5220    000000a0     libmmwavelink_xwr18xx.ae674 : rl_controller.oe674 (.text:rlAppendSubBlock)
+                  007f52c0    000000a0                                 : rl_driver.oe674 (.text:rlDriverVerifyCRC)
+                  007f5360    00000080     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUF_MMWave_close)
+                  007f53e0    00000080                             : ADCBuf.oe674 (.text:ADCBuf_init)
+                  007f5460    00000080     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.text:EDMA3MapChToEvtQ)
+                  007f54e0    00000080                           : edma.oe674 (.text:EDMA_getTransferControllerErrorStatusInfo)
+                  007f5560    00000080                           : edma.oe674 (.text:EDMA_linkParamSets)
+                  007f55e0    00000080     interrupt.oe674 (.text:IntEventCombineAdd)
+                  007f5660    00000080     interrupt.oe674 (.text:IntEventCombineRemove)
+                  007f56e0    00000080     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_writeReset)
+                  007f5760    00000080     MemoryP_nonos.oe674 (.text:MemoryP_ctrlAlloc)
+                  007f57e0    00000080     dss_main.oe674 (.text:MmwDemo_dataPathInitVitalSignsToDefault)
+                  007f5860    00000080     dss_data_path.oe674 (.text:MmwDemo_dataPathWait1DInputData)
+                  007f58e0    00000080     mmw_link.oe674 (.text:MmwaveLink_enableContMode)
+                  007f5960    00000080     mmw_link.oe674 (.text:MmwaveLink_mmwaveLinkMgmtTask)
+                  007f59e0    00000080     mmw_link.oe674 (.text:MmwaveLink_setAdvFrameConfig)
+                  007f5a60    00000080     mmw_link.oe674 (.text:MmwaveLink_setBpmChirpConfig)
+                  007f5ae0    00000080     mmw_link.oe674 (.text:MmwaveLink_setContModeConfig)
+                  007f5b60    00000080     mmw_link.oe674 (.text:MmwaveLink_setFrameConfig)
+                  007f5be0    00000080     mmw_link.oe674 (.text:MmwaveLink_setHsiClk)
+                  007f5c60    00000080     mmw_link.oe674 (.text:MmwaveLink_setProfileConfig)
+                  007f5ce0    00000080     mmw_link.oe674 (.text:MmwaveLink_setRfDevCfg)
+                  007f5d60    00000080     mmw_link.oe674 (.text:MmwaveLink_setRunTimeCalibConfig)
+                  007f5de0    00000080     SemaphoreP_nonos.oe674 (.text:SemaphoreP_pend)
+                  007f5e60    00000080     rts6740_elf.lib : trgmsg.c.obj (.text:__TI_readmsg)
+                  007f5ee0    00000080                     : fixdu.c.obj (.text:__c6xabi_fixdu)
+                  007f5f60    00000080                     : llshift.c.obj (.text:__c6xabi_llshl)
+                  007f5fe0    00000080                     : boot.c.obj (.text:_c_int00)
+                  007f6060    00000080     dss_main.oe674 (.text:dssDataPathStop)
+                  007f60e0    00000080     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDeviceIdentifyCmdDir)
+                  007f6160    00000080                                 : rl_driver.oe674 (.text:rlDriverOsiInit)
+                  007f61e0    00000080     rts6740_elf.lib : unlink.c.obj (.text:unlink)
+                  007f6260    00000060     libadcbuf_xwr18xx.ae674 : ADCBuf.oe674 (.text:ADCBuf_open)
+                  007f62c0    00000060     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_getCRCDataSelectBitValue)
+                  007f6320    00000060                          : crc.oe674 (.text:CRC_getCRCTypeBitValue)
+                  007f6380    00000060                          : crc.oe674 (.text:CRC_isTransactionIdValid)
+                  007f63e0    00000060                          : crc.oe674 (.text:CRC_resetSignature)
+                  007f6440    00000060     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.text:EDMA3ClrEvt)
+                  007f64a0    00000060                           : edma_low_level.oe674 (.text:EDMA3ClrIntr)
+                  007f6500    00000060                           : edma_low_level.oe674 (.text:EDMA3ClrMissEvt)
+                  007f6560    00000060                           : edma_low_level.oe674 (.text:EDMA3DisableDmaEvt)
+                  007f65c0    00000060                           : edma_low_level.oe674 (.text:EDMA3DisableEvtIntr)
+                  007f6620    00000060                           : edma_low_level.oe674 (.text:EDMA3EnableDmaEvt)
+                  007f6680    00000060                           : edma_low_level.oe674 (.text:EDMA3EnableEvtIntr)
+                  007f66e0    00000060                           : edma_low_level.oe674 (.text:EDMA3SetEvt)
+                  007f6740    00000060                           : edma.oe674 (.text:EDMA_configTransferControllerError)
+                  007f67a0    00000060                           : edma.oe674 (.text:EDMA_setDestinationAddress)
+                  007f6800    00000060                           : edma.oe674 (.text:EDMA_setSourceAddress)
+                  007f6860    00000060                           : edma.oe674 (.text:EDMA_validate_channelIdchannelType)
+                  007f68c0    00000060     HwiP_nonos.oe674 (.text:HwiP_delete)
+                  007f6920    00000060     HwiP_nonos.oe674 (.text:HwiP_dispatch)
+                  007f6980    00000060     interrupt.oe674 (.text:IntDSPINTCInit)
+                  007f69e0    00000060     interrupt.oe674 (.text:IntEnable)
+                  007f6a40    00000060     interrupt.oe674 (.text:IntEventCombineRegister)
+                  007f6aa0    00000060     interrupt.oe674 (.text:IntRegister)
+                  007f6b00    00000060     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_Config_init)
+                  007f6b60    00000060     dss_data_path.oe674 (.text:MmwDemo_dataPathConfigFFTs)
+                  007f6bc0    00000060     dss_data_path.oe674 (.text:MmwDemo_edmaErrorCallbackFxn)
+                  007f6c20    00000060     dss_data_path.oe674 (.text:MmwDemo_edmaTransferControllerErrorCallbackFxn)
+                  007f6c80    00000060     dss_main.oe674 (.text:MmwDemo_getChirpCfg)
+                  007f6ce0    00000060     dss_main.oe674 (.text:MmwDemo_mboxWrite)
+                  007f6d40    00000060     dss_data_path.oe674 (.text:MmwDemo_printHeapStats)
+                  007f6da0    00000060     mmw_link.oe674 (.text:MmwaveLink_mboxClose)
+                  007f6e00    00000060     mmw_link.oe674 (.text:MmwaveLink_mboxWrite)
+                  007f6e60    00000060     mmw_link.oe674 (.text:MmwaveLink_rfCalibration)
+                  007f6ec0    00000060     mmw_link.oe674 (.text:MmwaveLink_sensorStart)
+                  007f6f20    00000060     mmw_link.oe674 (.text:MmwaveLink_setAdcOutConfig)
+                  007f6f80    00000060     mmw_link.oe674 (.text:MmwaveLink_setChannelConfig)
+                  007f6fe0    00000060     mmw_link.oe674 (.text:MmwaveLink_setChirpConfig)
+                  007f7040    00000060     mmw_link.oe674 (.text:MmwaveLink_setInitTimeCalibConfig)
+                  007f70a0    00000060     mmw_link.oe674 (.text:MmwaveLink_setLowPowerModeConfig)
+                  007f7100    00000060     mmw_link.oe674 (.text:MmwaveLink_spawn)
+                  007f7160    00000060     osi_nonos.oe674 (.text:Osal_mutexCreate)
+                  007f71c0    00000060     osi_nonos.oe674 (.text:Osal_semCreate)
+                  007f7220    00000060     libsoc_xwr18xx.ae674 : soc_xwr18xx.oe674 (.text:SOC_setMMWaveDSSLinkState)
+                  007f7280    00000060                          : soc.oe674 (.text:SOC_unhaltBSS)
+                  007f72e0    00000060     rts6740_elf.lib : trgmsg.c.obj (.text:__TI_writemsg)
+                  007f7340    00000060                     : llshift.c.obj (.text:__c6xabi_llshru)
+                  007f73a0    00000060                     : imath64.c.obj (.text:_subcull)
+                  007f7400    00000060     dss_main.oe674 (.text:bssStopDone)
+                  007f7460    00000060     dss_main.oe674 (.text:dssStatusInfo)
+                  007f74c0    00000060     dss_vitalSignsDemo_utilsFunc.oe674 (.text:filter_RemoveImpulseNoise)
+                  007f7520    00000060     dss_main.oe674 (.text:getChirpEndId)
+                  007f7580    00000060     rts6740_elf.lib : lseek.c.obj (.text:lseek)
+                  007f75e0    00000060     dss_main.oe674 (.text:mboxWrite)
+                  007f7640    00000060     rts6740_elf.lib : memccpy.c.obj (.text:memccpy)
+                  007f76a0    00000060     libmmwavelink_xwr18xx.ae674 : rl_device.oe674 (.text:rlDeviceGetMssVersion)
+                  007f7700    00000060                                 : rl_device.oe674 (.text:rlDeviceSetHsiClk)
+                  007f7760    00000060                                 : rl_driver.oe674 (.text:rlDriverConstructInMsg)
+                  007f77c0    00000060                                 : rl_sensor.oe674 (.text:rlEnableContMode)
+                  007f7820    00000060                                 : rl_sensor.oe674 (.text:rlRfInitCalibConfig)
+                  007f7880    00000060                                 : rl_sensor.oe674 (.text:rlRfRunTimeCalibConfig)
+                  007f78e0    00000060                                 : rl_sensor.oe674 (.text:rlRfSetCalMonFreqLimitConfig)
+                  007f7940    00000060                                 : rl_sensor.oe674 (.text:rlRfSetCalMonTimeUnitConfig)
+                  007f79a0    00000060                                 : rl_sensor.oe674 (.text:rlRfSetDeviceCfg)
+                  007f7a00    00000060                                 : rl_sensor.oe674 (.text:rlSensorStart)
+                  007f7a60    00000060                                 : rl_sensor.oe674 (.text:rlSensorStop)
+                  007f7ac0    00000060                                 : rl_sensor.oe674 (.text:rlSetAdcOutConfig)
+                  007f7b20    00000060                                 : rl_sensor.oe674 (.text:rlSetBpmChirpConfig)
+                  007f7b80    00000060                                 : rl_sensor.oe674 (.text:rlSetBpmCommonConfig)
+                  007f7be0    00000060                                 : rl_sensor.oe674 (.text:rlSetChannelConfig)
+                  007f7c40    00000060                                 : rl_sensor.oe674 (.text:rlSetContModeConfig)
+                  007f7ca0    00000060                                 : rl_sensor.oe674 (.text:rlSetLowPowerModeConfig)
+                  007f7d00    00000060     rts6740_elf.lib : write.c.obj (.text:write)
+                  007f7d60    00000040     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUFContinuousModeCtrl)
+                  007f7da0    00000040                             : adcbuf_mmwave.oe674 (.text:ADCBUFSetPingNumChirpThreshhold)
+                  007f7de0    00000040                             : adcbuf_mmwave.oe674 (.text:ADCBUFSetPongNumChirpThreshhold)
+                  007f7e20    00000040                             : adcbuf_mmwave.oe674 (.text:ADCBUFSrcSelect)
+                  007f7e60    00000040     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_getSignatureRegister)
+                  007f7ea0    00000040                          : crc.oe674 (.text:CRC_releaseTransactionId)
+                  007f7ee0    00000040     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:CSL_FEXTR)
+                  007f7f20    00000040     libsoc_xwr18xx.ae674 : soc.oe674 (.text:CSL_FEXTR)
+                  007f7f60    00000040                          : soc_xwr18xx.oe674 (.text:CSL_FEXTR)
+                  007f7fa0    00000040     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:CSL_FINSR)
+                  007f7fe0    00000040     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CSL_FINSR)
+                  007f8020    00000040     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:CSL_FINSR)
+                  007f8060    00000040     libsoc_xwr18xx.ae674 : soc.oe674 (.text:CSL_FINSR)
+                  007f80a0    00000040                          : soc_xwr18xx.oe674 (.text:CSL_FINSR)
+                  007f80e0    00000040                          : soc_xwr18xx_dss.oe674 (.text:CSL_FINSR)
+                  007f8120    00000040     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.text:EDMA3MapQdmaChToPaRAM)
+                  007f8160    00000040                           : edma_low_level.oe674 (.text:EDMA3SetPaRAM)
+                  007f81a0    00000040                           : edma_low_level.oe674 (.text:EDMA3SetQdmaTrigWord)
+                  007f81e0    00000040                           : edma.oe674 (.text:EDMA_clearTransferControllerErrors)
+                  007f8220    00000040     Event_nonos.oe674 (.text:Event_checkEvents)
+                  007f8260    00000040     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.text:Mailbox_boxEmptyISRBss)
+                  007f82a0    00000040                              : mailbox.oe674 (.text:Mailbox_boxEmptyISRMssDss)
+                  007f82e0    00000040                              : mailbox.oe674 (.text:Mailbox_boxFullISRBss)
+                  007f8320    00000040     dss_data_path.oe674 (.text:MmwDemo_dataPathInit1Dstate)
+                  007f8360    00000040     dss_data_path.oe674 (.text:MmwDemo_dataPathObjInit)
+                  007f83a0    00000040     dss_main.oe674 (.text:MmwDemo_floorLog2)
+                  007f83e0    00000040     dss_data_path.oe674 (.text:MmwDemo_pow2roundup)
+                  007f8420    00000040     mmw_link.oe674 (.text:MmwaveLink_disableDevice)
+                  007f8460    00000040     libsoc_xwr18xx.ae674 : soc_xwr18xx_dss.oe674 (.text:SOC_getInAddr_LUTType)
+                  007f84a0    00000040                          : soc_xwr18xx_dss.oe674 (.text:SOC_getOutAddr_LUTType)
+                  007f84e0    00000040                          : soc_xwr18xx.oe674 (.text:SOC_isMMWaveMSSOperational)
+                  007f8520    00000040     SemaphoreP_nonos.oe674 (.text:SemaphoreP_post)
+                  007f8560    00000040     dss_main.oe674 (.text:StopRadar)
+                  007f85a0    00000040     DebugP_nonos.oe674 (.text:_DebugP_assert)
+                  007f85e0    00000040     rts6740_elf.lib : frcmpyd_div.c.obj (.text:__TI_frcmpyd_div)
+                  007f8620    00000040                     : isinf.c.obj (.text:__c6xabi_isinf)
+                  007f8660    00000040                     : _printfi.c.obj (.text:__c6xabi_isnan)
+                  007f86a0    00000040                     : strasg.asm.obj (.text:__strasgi_64plus)
+                  007f86e0    00000040                     : args_main.c.obj (.text:_args_main)
+                  007f8720    00000040     dss_main.oe674 (.text:dssDataPathReconfig)
+                  007f8760    00000040     dss_main.oe674 (.text:dssDataPathStart)
+                  007f87a0    00000040     rts6740_elf.lib : floor.c.obj (.text:floor)
+                  007f87e0    00000040     dss_main.oe674 (.text:getChirpStartIdx)
+                  007f8820    00000040     dss_main.oe674 (.text:getNumLoops)
+                  007f8860    00000040     dss_main.oe674 (.text:mboxCallback)
+                  007f88a0    00000040     libmmwavelink_xwr18xx.ae674 : rl_controller.oe674 (.text:rlAppendDummy)
+                  007f88e0    00000040                                 : rl_device.oe674 (.text:rlDeviceGetRfVersion)
+                  007f8920    00000040                                 : rl_driver.oe674 (.text:rlDriverFillPayload)
+                  007f8960    00000040                                 : rl_sensor.oe674 (.text:rlGetRfBootupStatus)
+                  007f89a0    00000040                                 : rl_sensor.oe674 (.text:rlRfInit)
+                  007f89e0    00000040     rts6740_elf.lib : strlen.c.obj (.text:strlen)
+                  007f8a20    00000040                     : wcslen.c.obj (.text:wcslen)
+                  007f8a60    00000020     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.text:ADCBUF_MMWave_init)
+                  007f8a80    00000020                             : ADCBuf.oe674 (.text:ADCBuf_Params_init)
+                  007f8aa0    00000020                             : ADCBuf.oe674 (.text:ADCBuf_control)
+                  007f8ac0    00000020     libcrc_xwr18xx.ae674 : crc.oe674 (.text:CRC_initConfigParams)
+                  007f8ae0    00000020     dss_main.oe674 (.text:Cycleprofiler_init)
+                  007f8b00    00000020     libedma_xwr18xx.ae674 : edma_low_level.oe674 (.text:EDMA3ChannelToParamMap)
+                  007f8b20    00000020                           : edma_low_level.oe674 (.text:EDMA3ClrCCErr)
+                  007f8b40    00000020                           : edma_low_level.oe674 (.text:EDMA3DisableQdmaEvt)
+                  007f8b60    00000020                           : edma_low_level.oe674 (.text:EDMA3EnableQdmaEvt)
+                  007f8b80    00000020                           : edma_low_level.oe674 (.text:EDMA3ErrIntrHighStatusGet)
+                  007f8ba0    00000020                           : edma_low_level.oe674 (.text:EDMA3GetCCErrStatus)
+                  007f8bc0    00000020                           : edma_low_level.oe674 (.text:EDMA3GetErrIntrStatus)
+                  007f8be0    00000020                           : edma_low_level.oe674 (.text:EDMA3GetIntrStatus)
+                  007f8c00    00000020                           : edma_low_level.oe674 (.text:EDMA3IntrStatusHighGet)
+                  007f8c20    00000020                           : edma_low_level.oe674 (.text:EDMA3QdmaClrMissEvt)
+                  007f8c40    00000020                           : edma_low_level.oe674 (.text:EDMA3QdmaGetErrIntrStatus)
+                  007f8c60    00000020                           : edma.oe674 (.text:EDMA_getNumInstances)
+                  007f8c80    00000020                           : edma_low_level.oe674 (.text:EDMAsetRegion)
+                  007f8ca0    00000020     Event_nonos.oe674 (.text:Event_create)
+                  007f8cc0    00000020     Event_nonos.oe674 (.text:Event_post)
+                  007f8ce0    00000020     HwiP_nonos.oe674 (.text:HwiP_Params_init)
+                  007f8d00    00000020     HwiP_nonos.oe674 (.text:HwiP_disableInterrupt)
+                  007f8d20    00000020     HwiP_nonos.oe674 (.text:HwiP_enableInterrupt)
+                  007f8d40    00000020     interrupt.oe674 (.text:IntDefaultHandler)
+                  007f8d60    00000020     interrupt.oe674 (.text:IntEventCombineIsr0)
+                  007f8d80    00000020     interrupt.oe674 (.text:IntEventCombineIsr1)
+                  007f8da0    00000020     interrupt.oe674 (.text:IntEventCombineIsr2)
+                  007f8dc0    00000020     interrupt.oe674 (.text:IntEventCombineIsr3)
+                  007f8de0    00000020     interrupt.oe674 (.text:IntGlobalDisable)
+                  007f8e00    00000020     interrupt.oe674 (.text:IntGlobalEnable)
+                  007f8e20    00000020     interrupt.oe674 (.text:IntGlobalRestore)
+                  007f8e40    00000020     MemoryP_nonos.oe674 (.text:MemoryP_ctrlFree)
+                  007f8e60    00000020     dss_main.oe674 (.text:MmwDemo_getProfileCfg)
+                  007f8e80    00000020     dss_data_path.oe674 (.text:MmwDemo_waitEndOfChirps)
+                  007f8ea0    00000020     mmw_link.oe674 (.text:MmwaveLink_enableDevice)
+                  007f8ec0    00000020     mmw_link.oe674 (.text:MmwaveLink_getSpawnCount)
+                  007f8ee0    00000020     mmw_link.oe674 (.text:MmwaveLink_maskHostIRQ)
+                  007f8f00    00000020     mmw_link.oe674 (.text:MmwaveLink_mboxCallbackFxn)
+                  007f8f20    00000020     mmw_link.oe674 (.text:MmwaveLink_mboxRead)
+                  007f8f40    00000020     mmw_link.oe674 (.text:MmwaveLink_registerInterruptHandler)
+                  007f8f60    00000020     mmw_link.oe674 (.text:MmwaveLink_unmaskHostIRQ)
+                  007f8f80    00000020     osi_nonos.oe674 (.text:Osal_mutexDelete)
+                  007f8fa0    00000020     osi_nonos.oe674 (.text:Osal_mutexLock)
+                  007f8fc0    00000020     osi_nonos.oe674 (.text:Osal_mutexUnlock)
+                  007f8fe0    00000020     osi_nonos.oe674 (.text:Osal_semDelete)
+                  007f9000    00000020     osi_nonos.oe674 (.text:Osal_semSignal)
+                  007f9020    00000020     osi_nonos.oe674 (.text:Osal_semWait)
+                  007f9040    00000020     libsoc_xwr18xx.ae674 : soc_xwr18xx.oe674 (.text:SOC_gateClock)
+                  007f9060    00000020                          : soc_xwr18xx.oe674 (.text:SOC_ungateClock)
+                  007f9080    00000020     SemaphoreP_nonos.oe674 (.text:SemaphoreP_Params_init)
+                  007f90a0    00000020     SemaphoreP_nonos.oe674 (.text:SemaphoreP_delete)
+                  007f90c0    00000020     rts6740_elf.lib : errno.c.obj (.text:__c6xabi_errno_addr)
+                  007f90e0    00000020                     : trunc.c.obj (.text:__c6xabi_trunc)
+                  007f9100    00000020                     : push.asm.obj (.text:__pop_rts)
+                  007f9120    00000020                     : push.asm.obj (.text:__push_rts)
+                  007f9140    00000020                     : _lock.c.obj (.text:_nop)
+                  007f9160    00000020                     : printf.c.obj (.text:_outc)
+                  007f9180    00000020                     : printf.c.obj (.text:_outs)
+                  007f91a0    00000020                     : signbit.c.obj (.text:_signbit)
+                  007f91c0    00000020                     : startup.c.obj (.text:_system_post_cinit)
+                  007f91e0    00000020                     : pre_init.c.obj (.text:_system_pre_init)
+                  007f9200    00000020                     : exit.c.obj (.text:abort)
+                  007f9220    00000020     dss_main.oe674 (.text:getNumChirps)
+                  007f9240    00000020     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.text:rlDriverGetHandle)
+                  007f9260    00000020                                 : rl_driver.oe674 (.text:rlDriverGetPlatformId)
+                  007f9280    00000020                                 : rl_driver.oe674 (.text:rlDriverIsDeviceMapValid)
+                  007f92a0    00000020                                 : rl_controller.oe674 (.text:rlGetSubBlockId)
+                  007f92c0    00000020                                 : rl_controller.oe674 (.text:rlGetSubBlockLen)
+                  007f92e0    00000010     dss_data_path.oe674 ($Tramp$S$$MmwDemo_dataPathInitEdma)
+                  007f92f0    00000010     --HOLE-- [fill = 00000000]
+
+.sysmem    0    007f9300    00004000     UNINITIALIZED
+                  007f9300    00000008     rts6740_elf.lib : memory.c.obj (.sysmem)
+                  007f9308    00003ff8     --HOLE--
+
+.l2data    0    00800000    0000c000     UNINITIALIZED
+                  00800000    0000c000     dss_data_path.oe674 (.l2data)
+
+.const     0    00810000    00002308     
+                  00810000    00000a34     mmw_link.oe674 (.const:.string)
+                  00810a34    00000978     dss_main.oe674 (.const:.string)
+                  008113ac    00000004     --HOLE-- [fill = 0]
+                  008113b0    00000800     dss_data_path.oe674 (.const:twiddleTableCommon)
+                  00811bb0    00000164     dss_config_edma_util.oe674 (.const:.string)
+                  00811d14    00000004     --HOLE-- [fill = 0]
+                  00811d18    00000101     rts6740_elf.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  00811e19    00000003     --HOLE-- [fill = 0]
+                  00811e1c    000000c0     dss_data_path.oe674 (.const:.string)
+                  00811edc    0000006c     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.const:.string)
+                  00811f48    00000060     dss_data_path.oe674 (.const:$P$T2$10)
+                  00811fa8    00000058     libedma_xwr18xx.ae674 : edma.oe674 (.const:.string)
+                  00812000    0000004c     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.const:.string)
+                  0081204c    0000003c     libsoc_xwr18xx.ae674 : soc_xwr18xx_dss.oe674 (.const:.string)
+                  00812088    00000038     libedma_xwr18xx.ae674 : edma_xwr1xxx.oe674 (.const:gEdmaHwAttrs)
+                  008120c0    00000030     dss_data_path.oe674 (.const:$P$T0$8)
+                  008120f0    00000028     DebugP_nonos.oe674 (.const:.string)
+                  00812118    00000024     rts6740_elf.lib : _printfi.c.obj (.const:.string)
+                  0081213c    00000024     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.const:Mailbox_defaultCfg)
+                  00812160    0000001c     interrupt.oe674 (.const:.string)
+                  0081217c    00000004     --HOLE-- [fill = 0]
+                  00812180    00000014     dss_data_path.oe674 (.const:$P$T3$11)
+                  00812194    00000014     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.const:.string)
+                  008121a8    00000014                             : adcbuf_mmwave.oe674 (.const:gADCBufFxnTable)
+                  008121bc    00000010     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.const:$P$T0$1)
+                  008121cc    00000010     mmw_link.oe674 (.const:$P$T0$1)
+                  008121dc    00000004     --HOLE-- [fill = 0]
+                  008121e0    00000010     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.const:$P$T1$2)
+                  008121f0    00000010                                 : rl_sensor.oe674 (.const:$P$T1$2)
+                  00812200    00000010                                 : rl_driver.oe674 (.const:$P$T10$11)
+                  00812210    00000010                                 : rl_sensor.oe674 (.const:$P$T12$13)
+                  00812220    00000010                                 : rl_sensor.oe674 (.const:$P$T13$14)
+                  00812230    00000010                                 : rl_sensor.oe674 (.const:$P$T2$3)
+                  00812240    00000010                                 : rl_sensor.oe674 (.const:$P$T20$21)
+                  00812250    00000010                                 : rl_sensor.oe674 (.const:$P$T21$22)
+                  00812260    00000010                                 : rl_driver.oe674 (.const:$P$T3$4)
+                  00812270    00000010                                 : rl_driver.oe674 (.const:$P$T5$6)
+                  00812280    00000010                                 : rl_driver.oe674 (.const:$P$T6$7)
+                  00812290    00000010                                 : rl_sensor.oe674 (.const:$P$T7$8)
+                  008122a0    00000010                                 : rl_driver.oe674 (.const:$P$T9$10)
+                  008122b0    00000010     libadcbuf_xwr18xx.ae674 : ADCBuf.oe674 (.const:ADCBuf_defaultParams)
+                  008122c0    00000010     libedma_xwr18xx.ae674 : edma.oe674 (.const:EDMA_config$1)
+                  008122d0    00000010     libadcbuf_xwr18xx.ae674 : adcbuf_xwr1xxx.oe674 (.const:gADCBufHwCfg)
+                  008122e0    0000000c     dss_data_path.oe674 (.const:$P$T1$9)
+                  008122ec    0000000c     libcrc_xwr18xx.ae674 : crc.oe674 (.const:.string)
+                  008122f8    00000008     libmmwavelink_xwr18xx.ae674 : rl_sensor.oe674 (.const:$P$T14$15)
+                  00812300    00000008                                 : rl_sensor.oe674 (.const:$P$T22$23)
+
+.fardata   0    00813910    00000ea8     
+                  00813910    00000600     HwiP_nonos.oe674 (.fardata:HwiP_dispatchTable)
+                  00813f10    000001e8     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.fardata:rl_driverData)
+                  008140f8    000001e0     rts6740_elf.lib : defs.c.obj (.fardata:_ftable)
+                  008142d8    00000100     libmmwavelink_xwr18xx.ae674 : rl_driver.oe674 (.fardata:rl_rxMsg)
+                  008143d8    00000100                                 : rl_driver.oe674 (.fardata:rl_txMsg)
+                  008144d8    000000a0     rts6740_elf.lib : write.c.obj (.fardata:_stream)
+                  00814578    00000078                     : write.c.obj (.fardata:_device)
+                  008145f0    00000050     libmailbox_xwr18xx.ae674 : mailbox.oe674 (.fardata:gMailboxMCB)
+                  00814640    00000040     rts6740_elf.lib : cos.c.obj (.fardata:R$1)
+                  00814680    00000040     libsoc_xwr18xx.ae674 : soc_xwr18xx.oe674 (.fardata:SOC_TranslateAddr_LUT)
+                  008146c0    00000040     rts6740_elf.lib : atan.c.obj (.fardata:arctan_consts$1)
+                  00814700    00000020                     : atan.c.obj (.fardata:A$2)
+                  00814720    00000020     libsoc_xwr18xx.ae674 : soc_xwr18xx_dss.oe674 (.fardata:gSOCHwAttrib)
+                  00814740    00000018     libadcbuf_xwr18xx.ae674 : adcbuf_xwr1xxx.oe674 (.fardata:ADCBuf_config)
+                  00814758    00000018     libmailbox_xwr18xx.ae674 : mailbox_xwr18xx.oe674 (.fardata:gMailboxDssBssHwCfg)
+                  00814770    00000018                              : mailbox_xwr18xx.oe674 (.fardata:gMailboxDssMssHwCfg)
+                  00814788    0000000c     mmw_link.oe674 (.fardata:rfDevCfg)
+                  00814794    0000000c     rts6740_elf.lib : exit.c.obj (.fardata)
+                  008147a0    00000008                     : memory.c.obj (.fardata)
+                  008147a8    00000004                     : _lock.c.obj (.fardata:_lock)
+                  008147ac    00000004                     : _lock.c.obj (.fardata:_unlock)
+                  008147b0    00000004                     : defs.c.obj (.fardata)
+                  008147b4    00000004                     : errno.c.obj (.fardata)
+
+.switch    0    008147b8    00000154     
+                  008147b8    00000058     dss_main.oe674 (.switch:asyncEventHandler)
+                  00814810    00000048     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.switch:ADCBUF_MMWave_control)
+                  00814858    00000038     rts6740_elf.lib : _printfi.c.obj (.switch:__TI_printfi)
+                  00814890    00000028     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.switch:ADCBUFCmdParamCheck)
+                  008148b8    00000024     dss_main.oe674 (.switch:mboxReadTask)
+                  008148dc    00000010     libadcbuf_xwr18xx.ae674 : adcbuf_mmwave.oe674 (.switch:ADCBUF_MMWave_getChanBufAddr)
+                  008148ec    00000010     libsoc_xwr18xx.ae674 : soc_xwr18xx_dss.oe674 (.switch:SOC_getInAddr_LUTType)
+                  008148fc    00000010                          : soc_xwr18xx_dss.oe674 (.switch:SOC_getOutAddr_LUTType)
+
+.cio       0    00814910    00000120     UNINITIALIZED
+                  00814910    00000120     rts6740_elf.lib : trgmsg.c.obj (.cio)
+
+MODULE SUMMARY
+
+       Module                               code     ro data   rw data
+       ------                               ----     -------   -------
+    .\
+       dss_data_path.oe674                  8464     2416      1114142
+       dss_main.oe674                       12720    2548      35672  
+       dss_config_edma_util.oe674           832      356       0      
+       intvecs.oe674                        704      0         0      
+       dss_vitalSignsDemo_utilsFunc.oe674   672      0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               23392    5320      1149814
+                                                                      
+    .\common\
+       mmw_link.oe674                       4848     2628      44     
+       osi_nonos.oe674                      384      0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               5232     2628      44     
+                                                                      
+    .\osal_nonos\
+       interrupt.oe674                      6592     28        576    
+       HwiP_nonos.oe674                     448      0         1553   
+       SemaphoreP_nonos.oe674               448      0         0      
+       MemoryP_nonos.oe674                  160      0         0      
+       Event_nonos.oe674                    144      0         0      
+       DebugP_nonos.oe674                   80       40        0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               7872     68        2129   
+                                                                      
+    C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/lib/dsplib.ae64P
+       DSP_fft16x16_sa.oe64P                768      0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               768      0         0      
+                                                                      
+    C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/lib/mathlib.ae674
+       cossp.oe674                          288      0         0      
+       sinsp.oe674                          288      0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               576      0         0      
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/lib/libmmwavealg_xwr18xx.ae674
+       mmwavelib_windowing.oe674            480      0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               480      0         0      
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwavelink/lib/libmmwavelink_xwr18xx.ae674
+       rl_driver.oe674                      9504     220       1000   
+       rl_sensor.oe674                      2944     128       0      
+       rl_device.oe674                      1088     0         0      
+       rl_controller.oe674                  480      0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               14016    348       1000   
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/adcbuf/lib/libadcbuf_xwr18xx.ae674
+       adcbuf_mmwave.oe674                  3296     168       0      
+       ADCBuf.oe674                         288      16        4      
+       adcbuf_xwr1xxx.oe674                 0        16        24     
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               3584     200       28     
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/crc/lib/libcrc_xwr18xx.ae674
+       crc.oe674                            2592     12        0      
+       crc_xwr18xx.oe674                    0        0         4      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               2592     12        4      
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/edma/lib/libedma_xwr18xx.ae674
+       edma.oe674                           7072     104       1800   
+       edma_low_level.oe674                 1952     0         4      
+       edma_xwr1xxx.oe674                   0        56        0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               9024     160       1804   
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/mailbox/lib/libmailbox_xwr18xx.ae674
+       mailbox.oe674                        3984     112       80     
+       mailbox_xwr18xx.oe674                0        0         48     
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               3984     112       128    
+                                                                      
+    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/lib/libsoc_xwr18xx.ae674
+       soc.oe674                            1072     0         0      
+       soc_xwr18xx.oe674                    640      0         64     
+       soc_xwr18xx_dss.oe674                448      92        32     
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               2160     92        96     
+                                                                      
+    C:/ti/ti-cgt-c6000_8.3.3/lib/rts6740_elf.lib
+       _printfi.c.obj                       13536    92        0      
+       memory.c.obj                         1760     0         8      
+       divd.c.obj                           1504     0         0      
+       cos.c.obj                            800      0         64     
+       defs.c.obj                           0        0         804    
+       fputs.c.obj                          800      0         0      
+       imath64.c.obj                        704      0         0      
+       divf.c.obj                           640      0         0      
+       atan.c.obj                           512      0         96     
+       trgmsg.c.obj                         224      0         288    
+       atan2.c.obj                          448      0         0      
+       fputc.c.obj                          448      0         0      
+       frexp.c.obj                          448      0         0      
+       getdevice.c.obj                      448      0         0      
+       imath40.c.obj                        448      0         0      
+       setvbuf.c.obj                        448      0         0      
+       hostrename.c.obj                     416      0         0      
+       ldexp.c.obj                          384      0         0      
+       write.c.obj                          96       0         280    
+       printf.c.obj                         304      0         0      
+       exit.c.obj                           256      0         12     
+       ctype.c.obj                          0        257       0      
+       atoi.c.obj                           256      0         0      
+       fclose.c.obj                         256      0         0      
+       fseek.c.obj                          256      0         0      
+       memset.c.obj                         240      0         0      
+       hostopen.c.obj                       224      0         8      
+       _io_perm.c.obj                       224      0         0      
+       _ltoa.c.obj                          224      0         0      
+       close.c.obj                          224      0         0      
+       divi.asm.obj                         224      0         0      
+       hostlseek.c.obj                      224      0         0      
+       hostwrite.c.obj                      224      0         0      
+       llshift.c.obj                        224      0         0      
+       autoinit.c.obj                       192      0         0      
+       divu.asm.obj                         192      0         0      
+       fflush.c.obj                         192      0         0      
+       hostread.c.obj                       192      0         0      
+       hostunlink.c.obj                     192      0         0      
+       modf.c.obj                           192      0         0      
+       remi.asm.obj                         192      0         0      
+       tls.c.obj                            192      0         0      
+       fixfu.c.obj                          160      0         0      
+       fopen.c.obj                          160      0         0      
+       hostclose.c.obj                      160      0         0      
+       memcpy64.asm.obj                     160      0         0      
+       remu.asm.obj                         160      0         0      
+       round.c.obj                          160      0         0      
+       boot.c.obj                           128      0         0      
+       fixdu.c.obj                          128      0         0      
+       unlink.c.obj                         128      0         0      
+       lseek.c.obj                          96       0         0      
+       memccpy.c.obj                        96       0         0      
+       args_main.c.obj                      64       0         0      
+       floor.c.obj                          64       0         0      
+       frcmpyd_div.c.obj                    64       0         0      
+       isinf.c.obj                          64       0         0      
+       push.asm.obj                         64       0         0      
+       strasg.asm.obj                       64       0         0      
+       strlen.c.obj                         64       0         0      
+       wcslen.c.obj                         64       0         0      
+       _lock.c.obj                          32       0         8      
+       errno.c.obj                          32       0         4      
+       pre_init.c.obj                       32       0         0      
+       signbit.c.obj                        32       0         0      
+       startup.c.obj                        32       0         0      
+       trunc.c.obj                          32       0         0      
+    +--+------------------------------------+--------+---------+---------+
+       Total:                               31200    349       1572   
+                                                                      
+       Heap:                                0        0         16384  
+       Stack:                               0        0         16384  
+    +--+------------------------------------+--------+---------+---------+
+       Grand Total:                         104880   9289      1189387
+
+
+FAR CALL TRAMPOLINES
+
+callee name               trampoline name
+   callee addr  tramp addr   call addr  call info
+--------------  -----------  ---------  ----------------
+$.text:MmwDemo_dataPathInitEdma:dss_data_path.oe674$0x0  $Tramp$S$$MmwDemo_dataPathInitEdma
+   200003e0     007f92e0     007ed794   dss_main.oe674 (.text:dssDataPathInit)
+$.text:EDMA_configErrorMonitoring:libedma_xwr18xx.ae674<edma.oe674>$0x0  $Tramp$S$$EDMA_configErrorMonitoring
+   007e8ce0     20000520     200004b0   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+$.text:EDMA_open:libedma_xwr18xx.ae674<edma.oe674>$0x0  $Tramp$S$$EDMA_open
+   007e8fa0     20000530     20000430   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+$.text:EDMA_init:libedma_xwr18xx.ae674<edma.oe674>$0x0  $Tramp$S$$EDMA_init
+   007ebaa0     20000540     20000420   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+$.text:EDMA_getNumInstances:libedma_xwr18xx.ae674<edma.oe674>$0x0  $Tramp$S$$EDMA_getNumInstances
+   007f8c60     20000550     200003f4   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+$.text:Cycleprofiler_init:dss_main.oe674$0x0  $Tramp$S$$Cycleprofiler_init
+   007f8ae0     20000560     200003c8   dss_main.oe674 (.text:main)
+$.text:SOC_init:libsoc_xwr18xx.ae674<soc.oe674>$0x0  $Tramp$S$$SOC_init
+   007ef3c0     20000570     20000374   dss_main.oe674 (.text:main)
+$.text:nonOsLoop:dss_main.oe674$0x0  $Tramp$S$$nonOsLoop
+   007f07c0     20000580     2000030c   dss_main.oe674 (.text:dssInitTask)
+$.text:dssDataPathInit:dss_main.oe674$0x0  $Tramp$S$$dssDataPathInit
+   007ed700     20000590     200002c4   dss_main.oe674 (.text:dssInitTask)
+$.text:memset:rts6740_elf.lib<memset.c.obj>$0x0  $Tramp$S$$memset
+   007f2fe0     200005a0     20000264   dss_main.oe674 (.text:dssInitTask)
+                             20000350   dss_main.oe674 (.text:main)
+                             20000364   dss_main.oe674 (.text:main)
+$.text:MmwaveLink_getVersion:mmw_link.oe674$0x0  $Tramp$S$$MmwaveLink_getVersion
+   007edf00     200005b0     20000244   dss_main.oe674 (.text:dssInitTask)
+$.text:dssStatusInfo:dss_main.oe674$0x0  $Tramp$S$$dssStatusInfo
+   007f7460     200005c0     20000230   dss_main.oe674 (.text:dssInitTask)
+                             20000258   dss_main.oe674 (.text:dssInitTask)
+                             200002b8   dss_main.oe674 (.text:dssInitTask)
+$.text:MmwaveLink_getRfBootupStatus:mmw_link.oe674$0x0  $Tramp$S$$MmwaveLink_getRfBootupStatus
+   007f4820     200005d0     2000021c   dss_main.oe674 (.text:dssInitTask)
+$.text:_DebugP_assert:DebugP_nonos.oe674$0x0  $Tramp$S$$_DebugP_assert
+   007f85a0     200005e0     20000210   dss_main.oe674 (.text:dssInitTask)
+$.text:_MmwDemo_dssAssert:dss_main.oe674$0x0  $Tramp$S$$_MmwDemo_dssAssert
+   007f4b40     200005f0     200001fc   dss_main.oe674 (.text:dssInitTask)
+$.text:MmwaveLink_initLink:mmw_link.oe674$0x0  $Tramp$S$$MmwaveLink_initLink
+   007e9a80     20000600     200001cc   dss_main.oe674 (.text:dssInitTask)
+$.text:mboxWrite:dss_main.oe674$0x0  $Tramp$S$$mboxWrite
+   007f75e0     20000610     200001bc   dss_main.oe674 (.text:dssInitTask)
+                             200002ac   dss_main.oe674 (.text:dssInitTask)
+$.text:SOC_isMMWaveMSSOperational:libsoc_xwr18xx.ae674<soc_xwr18xx.oe674>$0x0  $Tramp$S$$SOC_isMMWaveMSSOperational
+   007f84e0     20000620     20000150   dss_main.oe674 (.text:dssInitTask)
+$.text:MmwDemo_dataPathInitVitalSignsToDefault:dss_main.oe674$0x0  $Tramp$S$$MmwDemo_dataPathInitVitalSignsToDefault
+   007f57e0     20000630     20000138   dss_main.oe674 (.text:dssInitTask)
+$.text:Event_create:Event_nonos.oe674$0x0  $Tramp$S$$Event_create
+   007f8ca0     20000640     200000f4   dss_main.oe674 (.text:dssInitTask)
+$.text:SOC_setMMWaveDSSLinkState:libsoc_xwr18xx.ae674<soc_xwr18xx.oe674>$0x0  $Tramp$S$$SOC_setMMWaveDSSLinkState
+   007f7220     20000650     200000f0   dss_main.oe674 (.text:dssInitTask)
+$.text:printf:rts6740_elf.lib<printf.c.obj>$0x0  $Tramp$S$$printf
+   007f30c0     20000660     200000cc   dss_main.oe674 (.text:dssInitTask)
+                             20000118   dss_main.oe674 (.text:dssInitTask)
+                             20000130   dss_main.oe674 (.text:dssInitTask)
+                             20000170   dss_main.oe674 (.text:dssInitTask)
+                             200001a0   dss_main.oe674 (.text:dssInitTask)
+                             200001ec   dss_main.oe674 (.text:dssInitTask)
+                             200002e4   dss_main.oe674 (.text:dssInitTask)
+                             200002f4   dss_main.oe674 (.text:dssInitTask)
+                             20000318   dss_main.oe674 (.text:dssInitTask)
+                             200003a4   dss_main.oe674 (.text:main)
+                             20000454   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+                             200004d0   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+$.text:Mailbox_open:libmailbox_xwr18xx.ae674<mailbox.oe674>$0x0  $Tramp$S$$Mailbox_open
+   007e5900     20000670     20000098   dss_main.oe674 (.text:dssInitTask)
+$.text:Mailbox_Config_init:libmailbox_xwr18xx.ae674<mailbox.oe674>$0x0  $Tramp$S$$Mailbox_Config_init
+   007f6b00     20000680     20000060   dss_main.oe674 (.text:dssInitTask)
+$.text:SemaphoreP_create:SemaphoreP_nonos.oe674$0x0  $Tramp$S$$SemaphoreP_create
+   007f4aa0     20000690     20000040   dss_main.oe674 (.text:dssInitTask)
+$.text:SemaphoreP_Params_init:SemaphoreP_nonos.oe674$0x0  $Tramp$S$$SemaphoreP_Params_init
+   007f9080     200006a0     2000002c   dss_main.oe674 (.text:dssInitTask)
+                             200003ec   dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
+$.text:Mailbox_init:libmailbox_xwr18xx.ae674<mailbox.oe674>$0x0  $Tramp$S$$Mailbox_init
+   007f29c0     200006b0     20000020   dss_main.oe674 (.text:dssInitTask)
+
+[27 trampolines]
+[44 trampoline calls]
+
+
+SEGMENT ATTRIBUTES
+
+    id tag      seg value
+    -- ---      --- -----
+     0 PHA_PAGE 12  1    
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                          
+-------   ----                                          
+007f5360  ADCBUF_MMWave_close                           
+007e2c60  ADCBUF_MMWave_control                         
+007f0cc0  ADCBUF_MMWave_getChanBufAddr                  
+007f8a60  ADCBUF_MMWave_init                            
+007ed3c0  ADCBUF_MMWave_open                            
+007f8a80  ADCBuf_Params_init                            
+00814740  ADCBuf_config                                 
+007f8aa0  ADCBuf_control                                
+008122b0  ADCBuf_defaultParams                          
+007f53e0  ADCBuf_init                                   
+007f6260  ADCBuf_open                                   
+007f9200  C$$EXIT                                       
+007f7338  C$$IO$$                                       
+007e97e0  CRC_computeSignature                          
+007f3440  CRC_getSignature                              
+007f22c0  CRC_getTransactionId                          
+007f8ac0  CRC_initConfigParams                          
+007e7060  CRC_open                                      
+007e5480  ConfigRadarSS                                 
+007e8700  DSP_fft16x16                                  
+007f8b00  EDMA3ChannelToParamMap                        
+007f8b20  EDMA3ClrCCErr                                 
+007f6440  EDMA3ClrEvt                                   
+007f64a0  EDMA3ClrIntr                                  
+007f6500  EDMA3ClrMissEvt                               
+007f6560  EDMA3DisableDmaEvt                            
+007f65c0  EDMA3DisableEvtIntr                           
+007f8b40  EDMA3DisableQdmaEvt                           
+007f4280  EDMA3EnableChInShadowReg                      
+007f6620  EDMA3EnableDmaEvt                             
+007f6680  EDMA3EnableEvtIntr                            
+007f8b60  EDMA3EnableQdmaEvt                            
+007f8b80  EDMA3ErrIntrHighStatusGet                     
+007f8ba0  EDMA3GetCCErrStatus                           
+007f8bc0  EDMA3GetErrIntrStatus                         
+007f8be0  EDMA3GetIntrStatus                            
+007ef140  EDMA3Init                                     
+007f8c00  EDMA3IntrStatusHighGet                        
+007f5460  EDMA3MapChToEvtQ                              
+007f8120  EDMA3MapQdmaChToPaRAM                         
+007f8c20  EDMA3QdmaClrMissEvt                           
+007f8c40  EDMA3QdmaGetErrIntrStatus                     
+007f66e0  EDMA3SetEvt                                   
+007f8160  EDMA3SetPaRAM                                 
+007f81a0  EDMA3SetQdmaTrigWord                          
+007e7a80  EDMA_configChannel                            
+007e8ce0  EDMA_configErrorMonitoring                    
+007f0de0  EDMA_configParamSet                           
+007f4320  EDMA_disableChannel                           
+007f43c0  EDMA_enableChannel                            
+007f8c60  EDMA_getNumInstances                          
+007ebaa0  EDMA_init                                     
+007f2480  EDMA_isTransferComplete                       
+007f5560  EDMA_linkParamSets                            
+007e8fa0  EDMA_open                                     
+007f67a0  EDMA_setDestinationAddress                    
+007f6800  EDMA_setSourceAddress                         
+007f3500  EDMA_startDmaTransfer                         
+007f8c80  EDMAsetRegion                                 
+007ee4e0  EDMAutil_configType1                          
+007f2560  EDMAutil_setAndTrigger                        
+007f8220  Event_checkEvents                             
+007f8ca0  Event_create                                  
+007f8cc0  Event_post                                    
+007f4500  HOSTclose                                     
+007f2640  HOSTlseek                                     
+007f2720  HOSTopen                                      
+007f35c0  HOSTread                                      
+007ed560  HOSTrename                                    
+007f3680  HOSTunlink                                    
+007f2800  HOSTwrite                                     
+007f8ce0  HwiP_Params_init                              
+007f45a0  HwiP_create                                   
+007f68c0  HwiP_delete                                   
+007f8de0  HwiP_disable                                  
+007f8d00  HwiP_disableInterrupt                         
+007f6920  HwiP_dispatch                                 
+00813910  HwiP_dispatchTable                            
+007f8d20  HwiP_enableInterrupt                          
+007f8e20  HwiP_restore                                  
+007f6980  IntDSPINTCInit                                
+007f69e0  IntEnable                                     
+007f55e0  IntEventCombineAdd                            
+007ebc80  IntEventCombineInit                           
+007f6a40  IntEventCombineRegister                       
+007f5660  IntEventCombineRemove                         
+007f4640  IntEventMap                                   
+007f8de0  IntGlobalDisable                              
+007f8e00  IntGlobalEnable                               
+007f8e20  IntGlobalRestore                              
+007f6aa0  IntRegister                                   
+007f6b00  Mailbox_Config_init                           
+007ee640  Mailbox_close                                 
+0081213c  Mailbox_defaultCfg                            
+007f29c0  Mailbox_init                                  
+007e5900  Mailbox_open                                  
+007ec400  Mailbox_read                                  
+007f17c0  Mailbox_readFlush                             
+007eb060  Mailbox_write                                 
+007f56e0  Mailbox_writeReset                            
+007f5760  MemoryP_ctrlAlloc                             
+007f8e40  MemoryP_ctrlFree                              
+007e4a40  MmwDemo_dataPathConfigBuffers                 
+007e7740  MmwDemo_dataPathConfigEdma                    
+007f6b60  MmwDemo_dataPathConfigFFTs                    
+007f8320  MmwDemo_dataPathInit1Dstate                   
+200003e0  MmwDemo_dataPathInitEdma                      
+007eb280  MmwDemo_dataPathInitVitalSignsAndMonitor      
+007f57e0  MmwDemo_dataPathInitVitalSignsToDefault       
+007f8360  MmwDemo_dataPathObjInit                       
+007f5860  MmwDemo_dataPathWait1DInputData               
+007f4780  MmwDemo_dataPathWait1DOutputData              
+007f6bc0  MmwDemo_edmaErrorCallbackFxn                  
+007f6c20  MmwDemo_edmaTransferControllerErrorCallbackFxn
+007e4f60  MmwDemo_gen_twiddle_fft16x16_fast             
+007f6c80  MmwDemo_getChirpCfg                           
+007f8e60  MmwDemo_getProfileCfg                         
+007f83e0  MmwDemo_pow2roundup                           
+007f6d40  MmwDemo_printHeapStats                        
+007f8e80  MmwDemo_waitEndOfChirps                       
+007f58e0  MmwaveLink_enableContMode                     
+007f4820  MmwaveLink_getRfBootupStatus                  
+007f8ec0  MmwaveLink_getSpawnCount                      
+007edf00  MmwaveLink_getVersion                         
+007e9a80  MmwaveLink_initLink                           
+007f5960  MmwaveLink_mmwaveLinkMgmtTask                 
+007f6e60  MmwaveLink_rfCalibration                      
+007f6ec0  MmwaveLink_sensorStart                        
+007f48c0  MmwaveLink_sensorStop                         
+007f6f20  MmwaveLink_setAdcOutConfig                    
+007f59e0  MmwaveLink_setAdvFrameConfig                  
+007f5a60  MmwaveLink_setBpmChirpConfig                  
+007f4960  MmwaveLink_setBpmCommonConfig                 
+007f38c0  MmwaveLink_setCalMonConfig                    
+007f6f80  MmwaveLink_setChannelConfig                   
+007f6fe0  MmwaveLink_setChirpConfig                     
+007f5ae0  MmwaveLink_setContModeConfig                  
+007f5b60  MmwaveLink_setFrameConfig                     
+007f5be0  MmwaveLink_setHsiClk                          
+007f7040  MmwaveLink_setInitTimeCalibConfig             
+007f70a0  MmwaveLink_setLowPowerModeConfig              
+007f5c60  MmwaveLink_setProfileConfig                   
+007f5ce0  MmwaveLink_setRfDevCfg                        
+007f5d60  MmwaveLink_setRunTimeCalibConfig              
+007f8f60  MmwaveLink_unmaskHostIRQ                      
+007f7160  Osal_mutexCreate                              
+007f8f80  Osal_mutexDelete                              
+007f8fa0  Osal_mutexLock                                
+007f8fc0  Osal_mutexUnlock                              
+007f71c0  Osal_semCreate                                
+007f8fe0  Osal_semDelete                                
+007f9000  Osal_semSignal                                
+007f9020  Osal_semWait                                  
+007f4a00  SOC_SystemISR                                 
+00814680  SOC_TranslateAddr_LUT                         
+007f18c0  SOC_deviceInit                                
+007f9040  SOC_gateClock                                 
+007f8460  SOC_getInAddr_LUTType                         
+007f84a0  SOC_getOutAddr_LUTType                        
+007ef3c0  SOC_init                                      
+007f84e0  SOC_isMMWaveMSSOperational                    
+007ee900  SOC_registerSysIntListener                    
+007f7220  SOC_setMMWaveDSSLinkState                     
+007f19c0  SOC_translateAddress                          
+007f9060  SOC_ungateClock                               
+007f7280  SOC_unhaltBSS                                 
+007f9080  SemaphoreP_Params_init                        
+007f4aa0  SemaphoreP_create                             
+007f90a0  SemaphoreP_delete                             
+007f5de0  SemaphoreP_pend                               
+007f8520  SemaphoreP_post                               
+007f8520  SemaphoreP_postFromClock                      
+007f8520  SemaphoreP_postFromISR                        
+007f8560  StopRadar                                     
+007f85a0  _DebugP_assert                                
+007e02b4  _INT_SetWaitForInterrupt                      
+00100000  _L3data_size                                  
+20000000  _L3data_start                                 
+007f4b40  _MmwDemo_dssAssert                            
+00814910  __CIOBUF_                                     
+UNDEFED   __TI_CINIT_Base                               
+UNDEFED   __TI_CINIT_Limit                              
+UNDEFED   __TI_Handler_Table_Base                       
+UNDEFED   __TI_Handler_Table_Limit                      
+00810000  __TI_STACK_END                                
+00004000  __TI_STACK_SIZE                               
+00814a30  __TI_STATIC_BASE                              
+00004000  __TI_SYSMEM_SIZE                              
+UNDEFED   __TI_TLS_INIT_Base                            
+UNDEFED   __TI_TLS_INIT_Limit                           
+007f3980  __TI_auto_init_nobinit_nopinit                
+007f4be0  __TI_cleanup                                  
+00814794  __TI_cleanup_ptr                              
+007f1ac0  __TI_closefile                                
+007f3a40  __TI_doflush                                  
+00814798  __TI_dtors_ptr                                
+0081479c  __TI_enable_exit_profile_output               
+007f85e0  __TI_frcmpyd_div                              
+008147b0  __TI_ft_end                                   
+007f2aa0  __TI_ltoa                                     
+ffffffff  __TI_pprof_out_hndl                           
+007e02c0  __TI_printfi                                  
+ffffffff  __TI_prof_data_size                           
+ffffffff  __TI_prof_data_start                          
+007f5e60  __TI_readmsg                                  
+007f41c0  __TI_tls_init                                 
+00813738  __TI_tmpnams                                  
+007f72e0  __TI_writemsg                                 
+007f2b80  __TI_wrt_ok                                   
+ffffffff  __binit__                                     
+007e3940  __c6xabi_divd                                 
+007ea260  __c6xabi_divf                                 
+007f2c60  __c6xabi_divi                                 
+007f3b00  __c6xabi_divu                                 
+007ec5c0  __c6xabi_divul                                
+007ea4e0  __c6xabi_divull                               
+007f90c0  __c6xabi_errno_addr                           
+007f5ee0  __c6xabi_fixdu                                
+007f4c80  __c6xabi_fixfu                                
+007f8620  __c6xabi_isinf                                
+007f5f60  __c6xabi_llshl                                
+007f7340  __c6xabi_llshru                               
+007f4d20  __c6xabi_nround                               
+007f9100  __c6xabi_pop_rts                              
+007f9120  __c6xabi_push_rts                             
+007f3bc0  __c6xabi_remi                                 
+007f4dc0  __c6xabi_remu                                 
+007f4d20  __c6xabi_roundl                               
+007f86a0  __c6xabi_strasgi_64plus                       
+007f90e0  __c6xabi_trunc                                
+007f90e0  __c6xabi_truncl                               
+ffffffff  __c_args__                                    
+007f2c60  __divi                                        
+007f3b00  __divu                                        
+008147b4  __errno                                       
+007f9100  __pop_rts                                     
+007f9120  __push_rts                                    
+007f3bc0  __remi                                        
+007f4dc0  __remu                                        
+007f86a0  __strasgi_64plus                              
+007f86e0  _args_main                                    
+007ef500  _c674x_mask_int10_isr                         
+007ef640  _c674x_mask_int11_isr                         
+007ef780  _c674x_mask_int12_isr                         
+007ef8c0  _c674x_mask_int13_isr                         
+007efa00  _c674x_mask_int14_isr                         
+007efb40  _c674x_mask_int15_isr                         
+007efc80  _c674x_mask_int4_isr                          
+007efdc0  _c674x_mask_int5_isr                          
+007eff00  _c674x_mask_int6_isr                          
+007f0040  _c674x_mask_int7_isr                          
+007f0180  _c674x_mask_int8_isr                          
+007f02c0  _c674x_mask_int9_isr                          
+007f0400  _c674x_nmi_isr                                
+007f0540  _c674x_rsvd_int2_isr                          
+007f0680  _c674x_rsvd_int3_isr                          
+007f5fe0  _c_int00                                      
+00811d18  _ctypes_                                      
+00814578  _device                                       
+008140f8  _ftable                                       
+007e0000  _intcVectorTable                              
+008147a8  _lock                                         
+007f9140  _nop                                          
+007f91a0  _signbit                                      
+0080c000  _stack                                        
+008144d8  _stream                                       
+007f73a0  _subcull                                      
+007f9300  _sys_memory                                   
+007f91c0  _system_post_cinit                            
+007f91e0  _system_pre_init                              
+008147ac  _unlock                                       
+007f9200  abort                                         
+007eb8a0  atan                                          
+007ec780  atan2                                         
+007ec780  atan2l                                        
+007eb8a0  atanl                                         
+007f1cc0  atoi                                          
+ffffffff  binit                                         
+007ec940  chirpProcess                                  
+007f2e20  close                                         
+007e7da0  cos                                           
+007e7da0  cosl                                          
+007f1140  cossp                                         
+007ed700  dssDataPathInit                               
+007f7460  dssStatusInfo                                 
+008138e8  edmaDbg                                       
+008147b4  errno                                         
+007f2f00  exit                                          
+007eebc0  filter_IIR_BiquadCascade                      
+007f74c0  filter_RemoveImpulseNoise                     
+007f5040  finddevice                                    
+007f87a0  floor                                         
+007f87a0  floorl                                        
+007ecb00  fputc                                         
+007e80c0  fputs                                         
+007e6900  free                                          
+007eccc0  frexp                                         
+007eccc0  frexpl                                        
+007f1dc0  fseek                                         
+008121a8  gADCBufFxnTable                               
+008122d0  gADCBufHwCfg                                  
+00814a58  gCRCRegister                                  
+008138d4  gCycleLog                                     
+00812088  gEdmaHwAttrs                                  
+00814a48  gFrameStartStatus                             
+21080000  gHSRAM                                        
+00814a4c  gInitTimeCalibStatus                          
+00814758  gMailboxDssBssHwCfg                           
+00814770  gMailboxDssMssHwCfg                           
+008145f0  gMailboxMCB                                   
+00812308  gMmwDssMCB                                    
+00f00000  gMmwL1                                        
+00800000  gMmwL2                                        
+20000000  gMmwL3                                        
+008138b8  gMmwaveLinkMCB                                
+00814a50  gRunTimeCalibStatus                           
+00814720  gSOCHwAttrib                                  
+00814a6c  g_MailboxInterruptFunc                        
+00814a70  g_channelNum                                  
+007e44c0  genWindow                                     
+007f9220  getNumChirps                                  
+007f1020  getdevice                                     
+008138f8  hwi                                           
+007eae20  interChirpProcessing                          
+007e83e0  interFrameProcessing                          
+007ee080  ldexp                                         
+007ee080  ldexpl                                        
+007f7580  lseek                                         
+20000340  main                                          
+007ece80  malloc                                        
+007f8860  mboxCallback                                  
+007f7640  memccpy                                       
+007f50e0  memcpy                                        
+007f2fe0  memset                                        
+007ec040  mmwavelib_windowing16x16_evenlen              
+007f3d40  modf                                          
+007f3d40  modfl                                         
+007f07c0  nonOsLoop                                     
+00813908  parmbuf                                       
+007e2300  parseProfileAndChirpConfig                    
+007f30c0  printf                                        
+007ecb00  putc                                          
+00814a5c  regionId                                      
+007f61e0  remove                                        
+00814788  rfDevCfg                                      
+007f88a0  rlAppendDummy                                 
+007f5220  rlAppendSubBlock                              
+007f76a0  rlDeviceGetMssVersion                         
+007f88e0  rlDeviceGetRfVersion                          
+007f1ec0  rlDeviceGetVersion                            
+007f60e0  rlDeviceIdentifyCmdDir                        
+007f1fc0  rlDevicePowerOff                              
+007f0900  rlDevicePowerOn                               
+007f7700  rlDeviceSetHsiClk                             
+007f1380  rlDriverAsyncEventHandler                     
+007f3ec0  rlDriverCalChkSum                             
+007e9520  rlDriverCmdInvoke                             
+007e8a00  rlDriverCmdSendRetry                          
+007f7760  rlDriverConstructInMsg                        
+007ed8a0  rlDriverDeInit                                
+007f3f80  rlDriverExecuteGetApi                         
+007f4040  rlDriverExecuteSetApi                         
+007f8920  rlDriverFillPayload                           
+007f9240  rlDriverGetHandle                             
+007f9260  rlDriverGetPlatformId                         
+007f31a0  rlDriverHostIrqHandler                        
+007ea740  rlDriverInit                                  
+007f9280  rlDriverIsDeviceMapValid                      
+007ed040  rlDriverMsgCmdReply                           
+007e73e0  rlDriverMsgRead                               
+007eed20  rlDriverMsgReadCmdCtx                         
+007f0a40  rlDriverMsgReadSpawnCtx                       
+007eda40  rlDriverMsgWrite                              
+007f6160  rlDriverOsiInit                               
+007f14a0  rlDriverProcRdMsg                             
+007ec220  rlDriverRdVerifyMsg                           
+007e6120  rlDriverRxHdrRead                             
+007f3280  rlDriverValidateHdr                           
+007f52c0  rlDriverVerifyCRC                             
+007eee80  rlDriverWaitForResponse                       
+007f77c0  rlEnableContMode                              
+007f8960  rlGetRfBootupStatus                           
+007f4100  rlGetSubBlock                                 
+007f92a0  rlGetSubBlockId                               
+007f92c0  rlGetSubBlockLen                              
+007f89a0  rlRfInit                                      
+007f7820  rlRfInitCalibConfig                           
+007f7880  rlRfRunTimeCalibConfig                        
+007f78e0  rlRfSetCalMonFreqLimitConfig                  
+007f7940  rlRfSetCalMonTimeUnitConfig                   
+007f79a0  rlRfSetDeviceCfg                              
+007f7a00  rlSensorStart                                 
+007f7a60  rlSensorStop                                  
+007f7ac0  rlSetAdcOutConfig                             
+007f0b80  rlSetAdvFrameConfig                           
+007f7b20  rlSetBpmChirpConfig                           
+007f7b80  rlSetBpmCommonConfig                          
+007f7be0  rlSetChannelConfig                            
+007edbe0  rlSetChirpConfig                              
+007f7c40  rlSetContModeConfig                           
+007eefe0  rlSetFrameConfig                              
+007f7ca0  rlSetLowPowerModeConfig                       
+007ee200  rlSetProfileConfig                            
+008142d8  rl_rxMsg                                      
+008143d8  rl_txMsg                                      
+007ee080  scalbn                                        
+007ee080  scalbnl                                       
+007ed200  setvbuf                                       
+007f1274  sinsp                                         
+007f89e0  strlen                                        
+008113b0  twiddleTableCommon                            
+007f61e0  unlink                                        
+007f3360  unwrap                                        
+007f8a20  wcslen                                        
+007f7d00  write                                         
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                          
+-------   ----                                          
+00004000  __TI_STACK_SIZE                               
+00004000  __TI_SYSMEM_SIZE                              
+00100000  _L3data_size                                  
+007e0000  _intcVectorTable                              
+007e02b4  _INT_SetWaitForInterrupt                      
+007e02c0  __TI_printfi                                  
+007e2300  parseProfileAndChirpConfig                    
+007e2c60  ADCBUF_MMWave_control                         
+007e3940  __c6xabi_divd                                 
+007e44c0  genWindow                                     
+007e4a40  MmwDemo_dataPathConfigBuffers                 
+007e4f60  MmwDemo_gen_twiddle_fft16x16_fast             
+007e5480  ConfigRadarSS                                 
+007e5900  Mailbox_open                                  
+007e6120  rlDriverRxHdrRead                             
+007e6900  free                                          
+007e7060  CRC_open                                      
+007e73e0  rlDriverMsgRead                               
+007e7740  MmwDemo_dataPathConfigEdma                    
+007e7a80  EDMA_configChannel                            
+007e7da0  cos                                           
+007e7da0  cosl                                          
+007e80c0  fputs                                         
+007e83e0  interFrameProcessing                          
+007e8700  DSP_fft16x16                                  
+007e8a00  rlDriverCmdSendRetry                          
+007e8ce0  EDMA_configErrorMonitoring                    
+007e8fa0  EDMA_open                                     
+007e9520  rlDriverCmdInvoke                             
+007e97e0  CRC_computeSignature                          
+007e9a80  MmwaveLink_initLink                           
+007ea260  __c6xabi_divf                                 
+007ea4e0  __c6xabi_divull                               
+007ea740  rlDriverInit                                  
+007eae20  interChirpProcessing                          
+007eb060  Mailbox_write                                 
+007eb280  MmwDemo_dataPathInitVitalSignsAndMonitor      
+007eb8a0  atan                                          
+007eb8a0  atanl                                         
+007ebaa0  EDMA_init                                     
+007ebc80  IntEventCombineInit                           
+007ec040  mmwavelib_windowing16x16_evenlen              
+007ec220  rlDriverRdVerifyMsg                           
+007ec400  Mailbox_read                                  
+007ec5c0  __c6xabi_divul                                
+007ec780  atan2                                         
+007ec780  atan2l                                        
+007ec940  chirpProcess                                  
+007ecb00  fputc                                         
+007ecb00  putc                                          
+007eccc0  frexp                                         
+007eccc0  frexpl                                        
+007ece80  malloc                                        
+007ed040  rlDriverMsgCmdReply                           
+007ed200  setvbuf                                       
+007ed3c0  ADCBUF_MMWave_open                            
+007ed560  HOSTrename                                    
+007ed700  dssDataPathInit                               
+007ed8a0  rlDriverDeInit                                
+007eda40  rlDriverMsgWrite                              
+007edbe0  rlSetChirpConfig                              
+007edf00  MmwaveLink_getVersion                         
+007ee080  ldexp                                         
+007ee080  ldexpl                                        
+007ee080  scalbn                                        
+007ee080  scalbnl                                       
+007ee200  rlSetProfileConfig                            
+007ee4e0  EDMAutil_configType1                          
+007ee640  Mailbox_close                                 
+007ee900  SOC_registerSysIntListener                    
+007eebc0  filter_IIR_BiquadCascade                      
+007eed20  rlDriverMsgReadCmdCtx                         
+007eee80  rlDriverWaitForResponse                       
+007eefe0  rlSetFrameConfig                              
+007ef140  EDMA3Init                                     
+007ef3c0  SOC_init                                      
+007ef500  _c674x_mask_int10_isr                         
+007ef640  _c674x_mask_int11_isr                         
+007ef780  _c674x_mask_int12_isr                         
+007ef8c0  _c674x_mask_int13_isr                         
+007efa00  _c674x_mask_int14_isr                         
+007efb40  _c674x_mask_int15_isr                         
+007efc80  _c674x_mask_int4_isr                          
+007efdc0  _c674x_mask_int5_isr                          
+007eff00  _c674x_mask_int6_isr                          
+007f0040  _c674x_mask_int7_isr                          
+007f0180  _c674x_mask_int8_isr                          
+007f02c0  _c674x_mask_int9_isr                          
+007f0400  _c674x_nmi_isr                                
+007f0540  _c674x_rsvd_int2_isr                          
+007f0680  _c674x_rsvd_int3_isr                          
+007f07c0  nonOsLoop                                     
+007f0900  rlDevicePowerOn                               
+007f0a40  rlDriverMsgReadSpawnCtx                       
+007f0b80  rlSetAdvFrameConfig                           
+007f0cc0  ADCBUF_MMWave_getChanBufAddr                  
+007f0de0  EDMA_configParamSet                           
+007f1020  getdevice                                     
+007f1140  cossp                                         
+007f1274  sinsp                                         
+007f1380  rlDriverAsyncEventHandler                     
+007f14a0  rlDriverProcRdMsg                             
+007f17c0  Mailbox_readFlush                             
+007f18c0  SOC_deviceInit                                
+007f19c0  SOC_translateAddress                          
+007f1ac0  __TI_closefile                                
+007f1cc0  atoi                                          
+007f1dc0  fseek                                         
+007f1ec0  rlDeviceGetVersion                            
+007f1fc0  rlDevicePowerOff                              
+007f22c0  CRC_getTransactionId                          
+007f2480  EDMA_isTransferComplete                       
+007f2560  EDMAutil_setAndTrigger                        
+007f2640  HOSTlseek                                     
+007f2720  HOSTopen                                      
+007f2800  HOSTwrite                                     
+007f29c0  Mailbox_init                                  
+007f2aa0  __TI_ltoa                                     
+007f2b80  __TI_wrt_ok                                   
+007f2c60  __c6xabi_divi                                 
+007f2c60  __divi                                        
+007f2e20  close                                         
+007f2f00  exit                                          
+007f2fe0  memset                                        
+007f30c0  printf                                        
+007f31a0  rlDriverHostIrqHandler                        
+007f3280  rlDriverValidateHdr                           
+007f3360  unwrap                                        
+007f3440  CRC_getSignature                              
+007f3500  EDMA_startDmaTransfer                         
+007f35c0  HOSTread                                      
+007f3680  HOSTunlink                                    
+007f38c0  MmwaveLink_setCalMonConfig                    
+007f3980  __TI_auto_init_nobinit_nopinit                
+007f3a40  __TI_doflush                                  
+007f3b00  __c6xabi_divu                                 
+007f3b00  __divu                                        
+007f3bc0  __c6xabi_remi                                 
+007f3bc0  __remi                                        
+007f3d40  modf                                          
+007f3d40  modfl                                         
+007f3ec0  rlDriverCalChkSum                             
+007f3f80  rlDriverExecuteGetApi                         
+007f4040  rlDriverExecuteSetApi                         
+007f4100  rlGetSubBlock                                 
+007f41c0  __TI_tls_init                                 
+007f4280  EDMA3EnableChInShadowReg                      
+007f4320  EDMA_disableChannel                           
+007f43c0  EDMA_enableChannel                            
+007f4500  HOSTclose                                     
+007f45a0  HwiP_create                                   
+007f4640  IntEventMap                                   
+007f4780  MmwDemo_dataPathWait1DOutputData              
+007f4820  MmwaveLink_getRfBootupStatus                  
+007f48c0  MmwaveLink_sensorStop                         
+007f4960  MmwaveLink_setBpmCommonConfig                 
+007f4a00  SOC_SystemISR                                 
+007f4aa0  SemaphoreP_create                             
+007f4b40  _MmwDemo_dssAssert                            
+007f4be0  __TI_cleanup                                  
+007f4c80  __c6xabi_fixfu                                
+007f4d20  __c6xabi_nround                               
+007f4d20  __c6xabi_roundl                               
+007f4dc0  __c6xabi_remu                                 
+007f4dc0  __remu                                        
+007f5040  finddevice                                    
+007f50e0  memcpy                                        
+007f5220  rlAppendSubBlock                              
+007f52c0  rlDriverVerifyCRC                             
+007f5360  ADCBUF_MMWave_close                           
+007f53e0  ADCBuf_init                                   
+007f5460  EDMA3MapChToEvtQ                              
+007f5560  EDMA_linkParamSets                            
+007f55e0  IntEventCombineAdd                            
+007f5660  IntEventCombineRemove                         
+007f56e0  Mailbox_writeReset                            
+007f5760  MemoryP_ctrlAlloc                             
+007f57e0  MmwDemo_dataPathInitVitalSignsToDefault       
+007f5860  MmwDemo_dataPathWait1DInputData               
+007f58e0  MmwaveLink_enableContMode                     
+007f5960  MmwaveLink_mmwaveLinkMgmtTask                 
+007f59e0  MmwaveLink_setAdvFrameConfig                  
+007f5a60  MmwaveLink_setBpmChirpConfig                  
+007f5ae0  MmwaveLink_setContModeConfig                  
+007f5b60  MmwaveLink_setFrameConfig                     
+007f5be0  MmwaveLink_setHsiClk                          
+007f5c60  MmwaveLink_setProfileConfig                   
+007f5ce0  MmwaveLink_setRfDevCfg                        
+007f5d60  MmwaveLink_setRunTimeCalibConfig              
+007f5de0  SemaphoreP_pend                               
+007f5e60  __TI_readmsg                                  
+007f5ee0  __c6xabi_fixdu                                
+007f5f60  __c6xabi_llshl                                
+007f5fe0  _c_int00                                      
+007f60e0  rlDeviceIdentifyCmdDir                        
+007f6160  rlDriverOsiInit                               
+007f61e0  remove                                        
+007f61e0  unlink                                        
+007f6260  ADCBuf_open                                   
+007f6440  EDMA3ClrEvt                                   
+007f64a0  EDMA3ClrIntr                                  
+007f6500  EDMA3ClrMissEvt                               
+007f6560  EDMA3DisableDmaEvt                            
+007f65c0  EDMA3DisableEvtIntr                           
+007f6620  EDMA3EnableDmaEvt                             
+007f6680  EDMA3EnableEvtIntr                            
+007f66e0  EDMA3SetEvt                                   
+007f67a0  EDMA_setDestinationAddress                    
+007f6800  EDMA_setSourceAddress                         
+007f68c0  HwiP_delete                                   
+007f6920  HwiP_dispatch                                 
+007f6980  IntDSPINTCInit                                
+007f69e0  IntEnable                                     
+007f6a40  IntEventCombineRegister                       
+007f6aa0  IntRegister                                   
+007f6b00  Mailbox_Config_init                           
+007f6b60  MmwDemo_dataPathConfigFFTs                    
+007f6bc0  MmwDemo_edmaErrorCallbackFxn                  
+007f6c20  MmwDemo_edmaTransferControllerErrorCallbackFxn
+007f6c80  MmwDemo_getChirpCfg                           
+007f6d40  MmwDemo_printHeapStats                        
+007f6e60  MmwaveLink_rfCalibration                      
+007f6ec0  MmwaveLink_sensorStart                        
+007f6f20  MmwaveLink_setAdcOutConfig                    
+007f6f80  MmwaveLink_setChannelConfig                   
+007f6fe0  MmwaveLink_setChirpConfig                     
+007f7040  MmwaveLink_setInitTimeCalibConfig             
+007f70a0  MmwaveLink_setLowPowerModeConfig              
+007f7160  Osal_mutexCreate                              
+007f71c0  Osal_semCreate                                
+007f7220  SOC_setMMWaveDSSLinkState                     
+007f7280  SOC_unhaltBSS                                 
+007f72e0  __TI_writemsg                                 
+007f7338  C$$IO$$                                       
+007f7340  __c6xabi_llshru                               
+007f73a0  _subcull                                      
+007f7460  dssStatusInfo                                 
+007f74c0  filter_RemoveImpulseNoise                     
+007f7580  lseek                                         
+007f7640  memccpy                                       
+007f76a0  rlDeviceGetMssVersion                         
+007f7700  rlDeviceSetHsiClk                             
+007f7760  rlDriverConstructInMsg                        
+007f77c0  rlEnableContMode                              
+007f7820  rlRfInitCalibConfig                           
+007f7880  rlRfRunTimeCalibConfig                        
+007f78e0  rlRfSetCalMonFreqLimitConfig                  
+007f7940  rlRfSetCalMonTimeUnitConfig                   
+007f79a0  rlRfSetDeviceCfg                              
+007f7a00  rlSensorStart                                 
+007f7a60  rlSensorStop                                  
+007f7ac0  rlSetAdcOutConfig                             
+007f7b20  rlSetBpmChirpConfig                           
+007f7b80  rlSetBpmCommonConfig                          
+007f7be0  rlSetChannelConfig                            
+007f7c40  rlSetContModeConfig                           
+007f7ca0  rlSetLowPowerModeConfig                       
+007f7d00  write                                         
+007f8120  EDMA3MapQdmaChToPaRAM                         
+007f8160  EDMA3SetPaRAM                                 
+007f81a0  EDMA3SetQdmaTrigWord                          
+007f8220  Event_checkEvents                             
+007f8320  MmwDemo_dataPathInit1Dstate                   
+007f8360  MmwDemo_dataPathObjInit                       
+007f83e0  MmwDemo_pow2roundup                           
+007f8460  SOC_getInAddr_LUTType                         
+007f84a0  SOC_getOutAddr_LUTType                        
+007f84e0  SOC_isMMWaveMSSOperational                    
+007f8520  SemaphoreP_post                               
+007f8520  SemaphoreP_postFromClock                      
+007f8520  SemaphoreP_postFromISR                        
+007f8560  StopRadar                                     
+007f85a0  _DebugP_assert                                
+007f85e0  __TI_frcmpyd_div                              
+007f8620  __c6xabi_isinf                                
+007f86a0  __c6xabi_strasgi_64plus                       
+007f86a0  __strasgi_64plus                              
+007f86e0  _args_main                                    
+007f87a0  floor                                         
+007f87a0  floorl                                        
+007f8860  mboxCallback                                  
+007f88a0  rlAppendDummy                                 
+007f88e0  rlDeviceGetRfVersion                          
+007f8920  rlDriverFillPayload                           
+007f8960  rlGetRfBootupStatus                           
+007f89a0  rlRfInit                                      
+007f89e0  strlen                                        
+007f8a20  wcslen                                        
+007f8a60  ADCBUF_MMWave_init                            
+007f8a80  ADCBuf_Params_init                            
+007f8aa0  ADCBuf_control                                
+007f8ac0  CRC_initConfigParams                          
+007f8b00  EDMA3ChannelToParamMap                        
+007f8b20  EDMA3ClrCCErr                                 
+007f8b40  EDMA3DisableQdmaEvt                           
+007f8b60  EDMA3EnableQdmaEvt                            
+007f8b80  EDMA3ErrIntrHighStatusGet                     
+007f8ba0  EDMA3GetCCErrStatus                           
+007f8bc0  EDMA3GetErrIntrStatus                         
+007f8be0  EDMA3GetIntrStatus                            
+007f8c00  EDMA3IntrStatusHighGet                        
+007f8c20  EDMA3QdmaClrMissEvt                           
+007f8c40  EDMA3QdmaGetErrIntrStatus                     
+007f8c60  EDMA_getNumInstances                          
+007f8c80  EDMAsetRegion                                 
+007f8ca0  Event_create                                  
+007f8cc0  Event_post                                    
+007f8ce0  HwiP_Params_init                              
+007f8d00  HwiP_disableInterrupt                         
+007f8d20  HwiP_enableInterrupt                          
+007f8de0  HwiP_disable                                  
+007f8de0  IntGlobalDisable                              
+007f8e00  IntGlobalEnable                               
+007f8e20  HwiP_restore                                  
+007f8e20  IntGlobalRestore                              
+007f8e40  MemoryP_ctrlFree                              
+007f8e60  MmwDemo_getProfileCfg                         
+007f8e80  MmwDemo_waitEndOfChirps                       
+007f8ec0  MmwaveLink_getSpawnCount                      
+007f8f60  MmwaveLink_unmaskHostIRQ                      
+007f8f80  Osal_mutexDelete                              
+007f8fa0  Osal_mutexLock                                
+007f8fc0  Osal_mutexUnlock                              
+007f8fe0  Osal_semDelete                                
+007f9000  Osal_semSignal                                
+007f9020  Osal_semWait                                  
+007f9040  SOC_gateClock                                 
+007f9060  SOC_ungateClock                               
+007f9080  SemaphoreP_Params_init                        
+007f90a0  SemaphoreP_delete                             
+007f90c0  __c6xabi_errno_addr                           
+007f90e0  __c6xabi_trunc                                
+007f90e0  __c6xabi_truncl                               
+007f9100  __c6xabi_pop_rts                              
+007f9100  __pop_rts                                     
+007f9120  __c6xabi_push_rts                             
+007f9120  __push_rts                                    
+007f9140  _nop                                          
+007f91a0  _signbit                                      
+007f91c0  _system_post_cinit                            
+007f91e0  _system_pre_init                              
+007f9200  C$$EXIT                                       
+007f9200  abort                                         
+007f9220  getNumChirps                                  
+007f9240  rlDriverGetHandle                             
+007f9260  rlDriverGetPlatformId                         
+007f9280  rlDriverIsDeviceMapValid                      
+007f92a0  rlGetSubBlockId                               
+007f92c0  rlGetSubBlockLen                              
+007f9300  _sys_memory                                   
+00800000  gMmwL2                                        
+0080c000  _stack                                        
+00810000  __TI_STACK_END                                
+008113b0  twiddleTableCommon                            
+00811d18  _ctypes_                                      
+00812088  gEdmaHwAttrs                                  
+0081213c  Mailbox_defaultCfg                            
+008121a8  gADCBufFxnTable                               
+008122b0  ADCBuf_defaultParams                          
+008122d0  gADCBufHwCfg                                  
+00812308  gMmwDssMCB                                    
+00813738  __TI_tmpnams                                  
+008138b8  gMmwaveLinkMCB                                
+008138d4  gCycleLog                                     
+008138e8  edmaDbg                                       
+008138f8  hwi                                           
+00813908  parmbuf                                       
+00813910  HwiP_dispatchTable                            
+008140f8  _ftable                                       
+008142d8  rl_rxMsg                                      
+008143d8  rl_txMsg                                      
+008144d8  _stream                                       
+00814578  _device                                       
+008145f0  gMailboxMCB                                   
+00814680  SOC_TranslateAddr_LUT                         
+00814720  gSOCHwAttrib                                  
+00814740  ADCBuf_config                                 
+00814758  gMailboxDssBssHwCfg                           
+00814770  gMailboxDssMssHwCfg                           
+00814788  rfDevCfg                                      
+00814794  __TI_cleanup_ptr                              
+00814798  __TI_dtors_ptr                                
+0081479c  __TI_enable_exit_profile_output               
+008147a8  _lock                                         
+008147ac  _unlock                                       
+008147b0  __TI_ft_end                                   
+008147b4  __errno                                       
+008147b4  errno                                         
+00814910  __CIOBUF_                                     
+00814a30  __TI_STATIC_BASE                              
+00814a48  gFrameStartStatus                             
+00814a4c  gInitTimeCalibStatus                          
+00814a50  gRunTimeCalibStatus                           
+00814a58  gCRCRegister                                  
+00814a5c  regionId                                      
+00814a6c  g_MailboxInterruptFunc                        
+00814a70  g_channelNum                                  
+00f00000  gMmwL1                                        
+20000000  _L3data_start                                 
+20000000  gMmwL3                                        
+20000340  main                                          
+200003e0  MmwDemo_dataPathInitEdma                      
+21080000  gHSRAM                                        
+ffffffff  __TI_pprof_out_hndl                           
+ffffffff  __TI_prof_data_size                           
+ffffffff  __TI_prof_data_start                          
+ffffffff  __binit__                                     
+ffffffff  __c_args__                                    
+ffffffff  binit                                         
+UNDEFED   __TI_CINIT_Base                               
+UNDEFED   __TI_CINIT_Limit                              
+UNDEFED   __TI_Handler_Table_Base                       
+UNDEFED   __TI_Handler_Table_Limit                      
+UNDEFED   __TI_TLS_INIT_Base                            
+UNDEFED   __TI_TLS_INIT_Limit                           
+
+[415 symbols]
