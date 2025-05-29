@@ -1,0 +1,11 @@
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\bin\Debug\WindowsFormsApp1.exe.config
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\bin\Debug\WindowsFormsApp1.exe
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\bin\Debug\WindowsFormsApp1.pdb
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\BPSK_RADAR.Form1.resources
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\BPSK_RADAR.Form3.resources
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\DACSystem_user_interface_v0.csproj.GenerateResource.cache
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\DACSystem_user_interface_v0.csproj.CoreCompileInputs.cache
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\WindowsFormsApp1.exe
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\WindowsFormsApp1.pdb
+D:\users\sara.salvador\DAC_SYSTEM\user_interface\DACSystem_user_interface_v0\DACSystem_user_interface_v0\obj\Debug\DACSystem_user_interface_v0.csprojAssemblyReference.cache

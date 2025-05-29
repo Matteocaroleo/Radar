@@ -1,0 +1,23 @@
+%%% PARAMETERS %%%
+
+% Vital signs parameters 
+0.3 <minRange> % minimum range of analysis [m]. This is related to the on-board processing. 
+0.9 <maxRange> % maximum range of analysis [m]. This is related to the on-board processing. 
+
+% Profile configuration parameters
+77 <fStart> % starting frequency [GHz] of the chirp.
+57 <rampEndTime> % total ramp duration [us]
+0 <txPowBckoff> % tx power reduction with respect to the maximum [dB]
+70 <slope> % frequency slope, MHz/us
+40 <rxGain> % rxGain [dB]
+
+% Frame confuguration 
+50 <framePeriod> % frame periodicity [ms]
+
+% Output parameters
+1 <sysInfo> % enables system information data transfer to the PC
+1 <vitalSigns > % enables vital signs signals and measurements data transfer to the PC
+1 <rangeProfile> % enables range profile data transfer to the PC
+1 <adcData> % enables ADC raw data transfer to the PC
+
+

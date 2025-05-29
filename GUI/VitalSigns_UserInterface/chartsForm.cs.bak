@@ -1,0 +1,418 @@
+﻿#define UART_CHAR
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+
+using System.IO.Ports;
+
+namespace WindowsFormsApp1
+{
+    public partial class chartsForm : Form
+    {
+ 
+ 
+        public const int N_FRAMES_ON_CHART = 250;
+        public const int N_RB_ON_CHART_MAX = 64;
+
+        private short [] frameAx = new short [N_FRAMES_ON_CHART];
+        public static float[] rangeAx = new float[N_RB_ON_CHART_MAX];
+
+        
+        public static float [] breathWfrmShow = new float[N_FRAMES_ON_CHART];
+        public static float[] heartWfrmShow = new float[N_FRAMES_ON_CHART];
+        public static float[] chestDispShow = new float[N_FRAMES_ON_CHART];
+        public static float[] rangeProfileShow = new float[N_RB_ON_CHART_MAX];
+        public static uint frameCount;
+        public static uint numRangeBinsPlot = N_RB_ON_CHART_MAX;
+
+        public static float rangeAccuracy = 0.04f;
+        public static float framePeriodicity_ms = 20;
+        private static int CHART_UPDATE_INTERVAL_MS = 100;
+        private static int MESSAGE_TIMEOUT_MS = 5000;
+        private static int messageTextBox_Timeout;
+
+        private static bool isInStop = false;
+
+        private static int nStatisticsPlot = 0;
+        private static int nInfo = 0;
+        public const int N_STATISTICS_MAX = 128;
+        private const int N_SYSINFO_MAX = 16;
+
+        public static float[] statistics = new float[N_STATISTICS_MAX];
+        public static string[] statNames = new string[N_STATISTICS_MAX];
+        public static float[] sysInfoVals = new float[N_SYSINFO_MAX];
+        public static string[] sysInfoNames = new string[N_SYSINFO_MAX];
+
+        public static int startRangeIdx = 0;
+        private static int prevStartIdx = -1;
+
+        private Color buttonColor = Color.WhiteSmoke;
+        private Color buttonPressedColor = Color.DarkGray;
+
+         private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            timer1.Interval = CHART_UPDATE_INTERVAL_MS;
+
+            if (startRangeIdx != prevStartIdx)
+            {
+                prevStartIdx = startRangeIdx;
+                for (int i = 0; i < N_RB_ON_CHART_MAX; i++)
+                    rangeAx[i] = (float)(startRangeIdx + i) * rangeAccuracy;
+            }
+
+            rangeProfile_chart.Series[0].Points.DataBindXY(rangeAx, rangeProfileShow);
+
+            rangeProfile_chart.ChartAreas[0].AxisX.Minimum = rangeAx[0];
+            rangeProfile_chart.ChartAreas[0].AxisX.Maximum = rangeAx[numRangeBinsPlot-1];
+
+            frameCount_textBox.Text = frameCount.ToString();
+
+            statNames_textBox.Clear();
+            statVals_textBox.Clear();
+            sysInfoNames_textBox.Clear();
+            sysInfoVals_textBox.Clear();
+ 
+            for (int ii = 0; ii < nInfo; ii++)
+            {
+                sysInfoNames_textBox.Text += sysInfoNames[ii] + Environment.NewLine;
+                sysInfoVals_textBox.Text += sysInfoVals[ii].ToString("0.##") + Environment.NewLine;
+            }
+            for (int ii = 0; ii < 20 /*nStatisticsPlot*/; ii++)
+            {
+                statNames_textBox.Text += statNames[ii] + Environment.NewLine;
+                statVals_textBox.Text += statistics[ii].ToString("0.##") + Environment.NewLine;
+            }
+
+            /* message textbox update */
+            if (messageTextBox_Timeout >= 0)
+            {
+                messageTextBox_Timeout--;
+                if (messageTextBox_Timeout <= 0)
+                {
+                    messageTextBox.Text = " ";
+                    messageTextBox.BackColor = Color.LightGray;
+                }
+            }
+        }
+
+        public chartsForm()
+        {
+            InitializeComponent();
+            my_InitializeComponent();
+
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
+
+        }
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*
+            if (readData.dataFromBoard == true)
+                readData.sp_cmd.Close();
+
+            done = true;
+           */
+        }
+
+        private static void sleep(int n)
+        {
+            int i;
+            for (i = 0; i < n * 1e6; i++) ;
+        }
+
+
+        private void my_InitializeComponent()
+        {
+            Axis ax;
+            int i;
+            Int32 cntStat = 0;
+            Int32 cntInfo = 0;
+
+            for (i = 0; i < N_FRAMES_ON_CHART; i++)
+            {
+                frameAx[i] = (short)i;
+                breathWfrmShow[i] = 0.0f;
+            }
+            for (i = 0; i < N_RB_ON_CHART_MAX; i++)
+                rangeAx[i] = (float)(i * rangeAccuracy);
+          
+
+            rangeProfile_chart.ChartAreas[0].AxisY.Minimum = 0.0f;
+            rangeProfile_chart.ChartAreas[0].AxisY.Maximum = 120.0f;
+             
+            ax = rangeProfile_chart.ChartAreas[0].AxisX;
+            ax.MajorGrid.Interval = 0.1;
+            ax.MajorTickMark.Interval = ax.MajorGrid.Interval;
+            ax.LabelStyle.Interval = ax.MajorTickMark.Interval;
+            ax.LabelStyle.Format = "0.0";
+
+            messageTextBox.Text = " ";
+            messageTextBox.BackColor = Color.LightGray;
+  
+            sysInfoNames[cntInfo++] = "rangeAccuracy [cm]";
+            sysInfoNames[cntInfo++] = "framePeriodicity [ms]";
+            sysInfoNames[cntInfo++] = "rxAntennaProcessed";
+            sysInfoNames[cntInfo++] = "firstRangeBin";
+            sysInfoNames[cntInfo++] = "lastRangeBin";
+
+
+            nStatisticsPlot = cntStat;
+            nInfo = cntInfo;
+
+            statNames_textBox.Multiline = true;
+            statVals_textBox.Multiline = true;
+            sysInfoNames_textBox.Multiline = true;
+            sysInfoVals_textBox.Multiline = true;
+            statNames_textBox.Size = new Size(165, 14* nStatisticsPlot);
+            statVals_textBox.Size = new Size(50, 14 * nStatisticsPlot);
+        }
+
+        public const int N_BYTES_CONFIG_COMMAND = 128;
+        public const int STOP_CMD = 0xB;
+        public const int START_CMD = 0xA;
+        public static byte[] cmd_buffer = new byte[N_BYTES_CONFIG_COMMAND];
+        public const int N_RETRY_UART = 5; // Maximum number of retry 
+        private static SerialPort sp_cmd;
+        public const int NBYTES_PACKET_MAX = 10000;//when sending heatmap increase for space//when not reduce for speed
+        public const int NBYTES_PACKET_MIN = 5000;//increase if problem on index when sending matrix//reduce for speed
+         private const int sleepTime = 1000;
+
+
+        private bool serialPort_sendCommand(string cmdString, byte nRetry)
+        {
+
+            bool msg_rcvd = false;
+            byte cnt_try = 0;
+
+            messageTextBox.Text = cmdString + Environment.NewLine + "... sending";
+            messageTextBox.BackColor = Color.Orange;
+
+            sp_cmd = startForm.sp_cmd;
+
+#if UART_CHAR
+            string reply;
+ 
+            while (msg_rcvd == false && cnt_try < nRetry)
+            {
+                try
+                {
+                    reply = sp_cmd.ReadExisting();
+                    sp_cmd.Write(cmdString);
+                    reply = sp_cmd.ReadTo("\n");
+                    reply = String.Concat(reply, "\n");
+
+                    if (string.Equals(reply, cmdString) == true)
+                        msg_rcvd = true;
+                    else
+                    {
+                        cnt_try++;
+                        sleep(1000);
+                    }
+                }
+
+                catch
+                {
+                    msg_rcvd = false;
+                }
+
+            }
+            if (msg_rcvd == true)
+            {
+                messageTextBox.Text = cmdString + Environment.NewLine + "... delivered";
+                messageTextBox.BackColor = Color.Green;
+                messageTextBox_Timeout = (int)Math.Round((float)MESSAGE_TIMEOUT_MS / (float)CHART_UPDATE_INTERVAL_MS);
+
+                return (true);
+            }
+
+            return (false);
+
+#else
+            char[] rcv_buffer = new char[NBYTES_PACKET_MIN + N_BYTES_CONFIG_COMMAND];
+
+            byte cmdChar = 0xFF;
+            if (string.Equals(cmdString, "sensorStop\n"))
+            {
+                cmdChar = STOP_CMD;
+            }
+            else if (string.Equals(cmdString, "sensorStart\n"))
+            {
+                cmdChar = START_CMD;
+            }
+            cmd_buffer[0] = cmdChar;
+            cmd_buffer[1] = cmdChar;
+            cmd_buffer[2] = cmdChar;
+
+            sp_cmd = startForm.sp_cmd;
+
+            while (msg_rcvd == false && cnt_try < N_RETRY_UART)
+            {
+                sp_cmd.ReadExisting();
+
+                sp_cmd.Write(cmd_buffer, 0, 3);
+                Array.Clear(rcv_buffer, 0, rcv_buffer.Length);
+
+                try
+                {
+                    rb = 0;
+                    while (rb < 3)
+                        rb += sp_cmd.Read(rcv_buffer, rb, 3);
+
+                    if (rcv_buffer[0] == cmdChar && rcv_buffer[1] == cmdChar && rcv_buffer[2] == cmdChar)
+                    {
+                        msg_rcvd = true;
+                        messageTextBox.Text = "COMMAND " + Environment.NewLine + "DELIVERED";
+                        messageTextBox.BackColor = Color.Green;
+                        messageTextBox_Timeout = (int)Math.Round((float)MESSAGE_TIMEOUT_MS / (float)CHART_UPDATE_INTERVAL_MS);
+
+                    }
+                }
+                catch
+                {
+                    cnt_try++;
+                    messageTextBox.Text = "try " + cnt_try.ToString();
+
+                }
+            }
+
+#endif
+        }
+
+        private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            isInStop = serialPort_sendCommand("sensorStop\n", 3);
+        }
+
+        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            serialPort_sendCommand("sensorStart\n", 1);
+        }
+
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            while (isInStop == false)
+            {
+                isInStop = serialPort_sendCommand("sensorStop\n", 3);
+            }
+
+            // Vital signs default configuration
+            float rangeStart_m = 0.3f;
+            float rangeEnd_m = 1.5f;
+            UInt16 winLen_breath = 256;
+            UInt16 winLen_heart = 512;
+            UInt16 rxAnt = 4;
+            float alpha_breathWfm = 0.1f;
+            float alpha_heartWfm = 0.05f;
+            UInt32 scale_breathWfm = 100000;
+            UInt32 scale_heartWfm = 300000;
+
+
+            string cmdString;
+
+            serialPort_sendCommand("flushCfg\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("dfeDataOutputMode 1\n", 1);
+            sleep(sleepTime);
+
+            serialPort_sendCommand("channelCfg 15 3 0\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("adcCfg 2 1\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("adcbufCfg -1 0 0 1 0\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("profileCfg 0 77 7 6 57 0 0 70 1 100 2000 0 0 40\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("chirpCfg 0 0 0 0 0 0 0 1\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("frameCfg 0 0 2 0 50 1 0\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("lowPower 0 1\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("guiMonitor 0 0 0 0 1\n", 1);
+            sleep(sleepTime);
+            serialPort_sendCommand("calibDcRangeSig -1 0 0 0 0\n", 1);
+            sleep(sleepTime);
+
+            cmdString = "vitalSignsCfg " +
+                rangeStart_m.ToString() + " " +
+                rangeEnd_m.ToString() + " " +
+                winLen_breath.ToString() + " " + 
+                winLen_heart.ToString() + " " +
+                rxAnt.ToString() + " " + 
+                alpha_breathWfm.ToString() + " " + 
+                alpha_heartWfm.ToString() + " " + 
+                scale_breathWfm.ToString() + " " + 
+                scale_heartWfm.ToString() + " ";
+        
+            serialPort_sendCommand(cmdString +"\n", 1);
+            sleep(sleepTime);
+
+            serialPort_sendCommand("motionDetection 1 20 0.04 0\n", 1);
+            sleep(sleepTime);
+
+            serialPort_sendCommand("sensorStart\n", 1);
+
+        }
+        private void exitApplicationToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            string errMessage = string.Format("Sure you want to quit?");
+
+            var dialogResult =
+                MessageBox.Show(errMessage, "Connection Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                exitApplication();
+            }
+        }
+
+        private static void exitApplication()
+        {
+            Application.Exit();
+            Environment.Exit(0);
+
+        }
+
+
+
+        private void recFile_button_Click(object sender, EventArgs e)
+        {
+
+            if (dataAcquire.isRecording == false)
+            {
+
+                recFile_button.BackColor = buttonPressedColor;
+                recFile_button.Text = "Recording";
+
+                string fileName = recFileName_textBox.Text;
+                if (String.IsNullOrEmpty(fileName) == true)
+                    fileName = "dataFile";
+
+                if (recFileTimeAndDate_checkBox.Checked == true)
+                {
+                    var time = DateTime.Now;
+                    string formattedTime = time.ToString("yyyyMMdd_hhmmss_tt");
+                    fileName = fileName + "_" + formattedTime;
+                }
+                dataAcquire.recFileName = fileName;
+                dataAcquire.startRecording = true;
+
+            }
+            else if (dataAcquire.isRecording == true)
+            {
+                dataAcquire.stopRecording = true;
+                recFile_button.BackColor = buttonColor;
+                recFile_button.Text = "Start Rec";
+
+            }
+
+        }
+
+    }
+}
+

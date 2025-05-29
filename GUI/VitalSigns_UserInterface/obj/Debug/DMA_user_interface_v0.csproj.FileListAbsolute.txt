@@ -1,0 +1,46 @@
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.GenerateResource.cache
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.CoreCompileInputs.cache
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.exe
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.pdb
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe.config
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.pdb
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\users\sara.salvador\EVOLUTION\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csprojAssemblyReference.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form2.resources
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.GenerateResource.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.CoreCompileInputs.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.exe
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.pdb
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe.config
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.pdb
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.ParamForm.resources
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csprojAssemblyReference.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csprojAssemblyReference.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form2.resources
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.ParamForm.resources
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.GenerateResource.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.CoreCompileInputs.cache
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.exe
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.pdb
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe.config
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.pdb
+F:\DMA TRENI\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Form2.resources
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.ParamForm.resources
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.GenerateResource.cache
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csproj.CoreCompileInputs.cache
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.exe
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\WindowsFormsApp1.pdb
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe.config
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.exe
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\bin\Debug\WindowsFormsApp1.pdb
+F:\DMA\interfaccia_grafica\DMA_user_interface_v0\obj\Debug\DMA_user_interface_v0.csprojAssemblyReference.cache
