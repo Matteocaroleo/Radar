@@ -6,3 +6,4 @@
 in CCS Project -> Import CCS project -> selezionare la cartella Radar
 ### Step 3 
 flaggare le due opzioni (dss mss)
+ciao
